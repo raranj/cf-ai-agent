@@ -1,0 +1,7 @@
+name = "mcp-agent-site"
+compatibility_date = "2025-01-01"
+
+[[d1_databases]]
+binding = "devices_db"
+database_name = "devices_db"
+database_id = "892e0fbf-65f1-4701-b16f-6d9194a32400"
