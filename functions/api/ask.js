@@ -376,6 +376,8 @@
 
 import { Agent } from "@cloudflare/agents";
 
+export class MyAgent extends Agent {}
+
 export async function onRequestPost(context) {
   const env = context.env;
   const { prompt } = await context.request.json();
@@ -388,7 +390,7 @@ export async function onRequestPost(context) {
   }
 
   // ✅ Initialize Cloudflare Agent with Workers AI + MCP server
-  const agent = new Agent({
+  const agent = new MyAgent({
     llm: {
       provider: "workers-ai",
       model: "@cf/meta/llama-3.1-8b-instruct",
