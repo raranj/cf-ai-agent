@@ -55,16 +55,6 @@
   <body>
     <div id="container">
       <h1>🤖 Ask the MCP Agent</h1>
-      <select id="llmProvider">
-        <option value="openai">OpenAI</option>
-        <option value="anthropic">Anthropic</option>
-        <option value="mistral">Mistral</option>
-      </select>
-      <input id="llmModel" placeholder="Model (e.g., gpt-4o-mini)" />
-      <input
-        id="mcpUrl"
-        placeholder="MCP Server URL (e.g., https://retail-mcp.example.com)"
-      />
       <input id="question" placeholder="Ask a question..." />
       <button id="askBtn">Ask</button>
 
@@ -77,14 +67,9 @@
 
       askBtn.addEventListener("click", async () => {
         const prompt = document.getElementById("question").value.trim();
-        const llm_provider = document
-          .getElementById("llmProvider")
-          .value.trim();
-        const llm_model = document.getElementById("llmModel").value.trim();
-        const mcp_url = document.getElementById("mcpUrl").value.trim();
 
-        if (!prompt || !llm_model || !mcp_url) {
-          alert("Please enter your question, LLM model, and MCP server URL.");
+        if (!prompt) {
+          alert("Please enter your question.");
           return;
         }
 
@@ -93,7 +78,7 @@
         const res = await fetch("/api/ask", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ prompt, llm_provider, llm_model, mcp_url }),
+          body: JSON.stringify({ prompt }),
         });
 
         const data = await res.json();
