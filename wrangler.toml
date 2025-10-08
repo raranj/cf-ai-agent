@@ -8,5 +8,4 @@ binding = "devices_db"
 database_name = "devices_db"
 database_id = "892e0fbf-65f1-4701-b16f-6d9194a32400"
 
-[compatibility_flags]
 compatibility_flags = ["durable_object_fetcher_requires_proxy"]
