@@ -1,7 +1,10 @@
 {
-  "name": "mcp-cf-agent",
+  "name": "mcp-agent-site",
   "type": "module",
   "dependencies": {
     "@cloudflare/agents": "latest"
+  },
+  "scripts": {
+    "build": "echo 'no build needed'"
   }
 }
