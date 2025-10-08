@@ -374,50 +374,47 @@
 
 
 
+
+
 import { Agent } from "@cloudflare/agents";
 
-export class MyAgent extends Agent {}
-
 export async function onRequestPost(context) {
-  const env = context.env;
-  const { prompt } = await context.request.json();
+    const env = context.env;
+    const { prompt } = await context.request.json();
 
-  if (!prompt) {
-    return new Response(
-      JSON.stringify({ error: "Missing prompt" }),
-      { status: 400, headers: { "Content-Type": "application/json" } }
-    );
-  }
+    if (!prompt) {
+        return new Response(JSON.stringify({ error: "Missing prompt" }), {
+            status: 400,
+            headers: { "Content-Type": "application/json" },
+        });
+    }
 
-  // ✅ Initialize Cloudflare Agent with Workers AI + MCP server
-  const agent = new MyAgent({
-    llm: {
-      provider: "workers-ai",
-      model: "@cf/meta/llama-3.1-8b-instruct",
-      apiKey: env.WORKERS_AI_API_TOKEN,
-    },
-    mcp: {
-      // The MCP server is running on the same domain
-      servers: [new URL(new URL(context.request.url).origin)],
-    },
-  });
+    const agent = new Agent({
+        llm: {
+            provider: "workers-ai",
+            model: "@cf/meta/llama-3.1-8b-instruct",
+            apiKey: env.WORKERS_AI_API_TOKEN,
+        },
+        mcp: {
+            servers: [new URL(new URL(context.request.url).origin)],
+        },
+    });
 
-  try {
-    // Ask the agent to respond (automatic tool orchestration)
-    const result = await agent.respond(prompt);
+    try {
+        const result = await agent.respond(prompt);
 
-    return new Response(
-      JSON.stringify({
-        answer: result.output_text,
-        tools_used: result.tools_used,
-      }),
-      { headers: { "Content-Type": "application/json" } }
-    );
-  } catch (err) {
-    console.error(err);
-    return new Response(
-      JSON.stringify({ error: err.message }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
-    );
-  }
+        return new Response(
+            JSON.stringify({
+                answer: result.output_text,
+                tools_used: result.tools_used,
+            }),
+            { headers: { "Content-Type": "application/json" } }
+        );
+    } catch (err) {
+        console.error(err);
+        return new Response(JSON.stringify({ error: err.message }), {
+            status: 500,
+            headers: { "Content-Type": "application/json" },
+        });
+    }
 }
