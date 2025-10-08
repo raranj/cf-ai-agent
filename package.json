@@ -1,0 +1,7 @@
+{
+  "name": "mcp-cf-agent",
+  "type": "module",
+  "dependencies": {
+    "@cloudflare/agents": "latest"
+  }
+}

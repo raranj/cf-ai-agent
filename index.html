@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MCP Client Agent Demo</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: #fafafa;
+        margin: 0;
+      }
+      #container {
+        width: 100%;
+        max-width: 700px;
+        text-align: center;
+      }
+      input,
+      button,
+      select {
+        font-size: 1rem;
+        padding: 0.7rem;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
+      input,
+      select {
+        width: 70%;
+        margin-bottom: 1rem;
+      }
+      button {
+        background: #0078ff;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #005fe0;
+      }
+      #answer {
+        margin-top: 2rem;
+        padding: 1rem;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        min-height: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>🤖 Ask the MCP Agent</h1>
+      <select id="llmProvider">
+        <option value="openai">OpenAI</option>
+        <option value="anthropic">Anthropic</option>
+        <option value="mistral">Mistral</option>
+      </select>
+      <input id="llmModel" placeholder="Model (e.g., gpt-4o-mini)" />
+      <input
+        id="mcpUrl"
+        placeholder="MCP Server URL (e.g., https://retail-mcp.example.com)"
+      />
+      <input id="question" placeholder="Ask a question..." />
+      <button id="askBtn">Ask</button>
+
+      <div id="answer">Type a question above.</div>
+    </div>
+
+    <script>
+      const askBtn = document.getElementById("askBtn");
+      const answerDiv = document.getElementById("answer");
+
+      askBtn.addEventListener("click", async () => {
+        const prompt = document.getElementById("question").value.trim();
+        const llm_provider = document
+          .getElementById("llmProvider")
+          .value.trim();
+        const llm_model = document.getElementById("llmModel").value.trim();
+        const mcp_url = document.getElementById("mcpUrl").value.trim();
+
+        if (!prompt || !llm_model || !mcp_url) {
+          alert("Please enter your question, LLM model, and MCP server URL.");
+          return;
+        }
+
+        answerDiv.textContent = "⏳ Thinking...";
+
+        const res = await fetch("/api/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ prompt, llm_provider, llm_model, mcp_url }),
+        });
+
+        const data = await res.json();
+        answerDiv.textContent = data.answer || "No response.";
+      });
+    </script>
+  </body>
+</html>
