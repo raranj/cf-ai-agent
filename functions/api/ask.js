@@ -1,3 +1,58 @@
+export async function onRequestPost({ request, env }) {
+  // Get the service binding for the client worker
+  const clientWorker = env.CLIENT_WORKER;
+
+  // Forward the request to the client worker and return its response
+  const response = await clientWorker.fetch(request);
+
+  return response;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // functions/mcp.js
 // export async function onRequest(context) {
 //   const { request, env, waitUntil } = context;
@@ -376,45 +431,97 @@
 
 
 
-import { Agent } from "@cloudflare/agents";
+// import { Agent } from "@cloudflare/agents";
 
-export async function onRequestPost(context) {
-    const env = context.env;
-    const { prompt } = await context.request.json();
+// export async function onRequestPost(context) {
+//     const env = context.env;
+//     const { prompt } = await context.request.json();
 
-    if (!prompt) {
-        return new Response(JSON.stringify({ error: "Missing prompt" }), {
-            status: 400,
-            headers: { "Content-Type": "application/json" },
-        });
-    }
+//     if (!prompt) {
+//         return new Response(JSON.stringify({ error: "Missing prompt" }), {
+//             status: 400,
+//             headers: { "Content-Type": "application/json" },
+//         });
+//     }
 
-    const agent = new Agent({
-        llm: {
-            provider: "workers-ai",
-            model: "@cf/meta/llama-3.1-8b-instruct",
-            apiKey: env.WORKERS_AI_API_TOKEN,
-        },
-        mcp: {
-            servers: [new URL(new URL(context.request.url).origin)],
-        },
-    });
+//     const agent = new Agent({
+//         llm: {
+//             provider: "workers-ai",
+//             model: "@cf/meta/llama-3.1-8b-instruct",
+//             apiKey: env.WORKERS_AI_API_TOKEN,
+//         },
+//         mcp: {
+//             servers: [new URL(new URL(context.request.url).origin)],
+//         },
+//     });
 
-    try {
-        const result = await agent.respond(prompt);
+//     try {
+//         const result = await agent.respond(prompt);
 
-        return new Response(
-            JSON.stringify({
-                answer: result.output_text,
-                tools_used: result.tools_used,
-            }),
-            { headers: { "Content-Type": "application/json" } }
-        );
-    } catch (err) {
-        console.error(err);
-        return new Response(JSON.stringify({ error: err.message }), {
-            status: 500,
-            headers: { "Content-Type": "application/json" },
-        });
-    }
-}
+//         return new Response(
+//             JSON.stringify({
+//                 answer: result.output_text,
+//                 tools_used: result.tools_used,
+//             }),
+//             { headers: { "Content-Type": "application/json" } }
+//         );
+//     } catch (err) {
+//         console.error(err);
+//         return new Response(JSON.stringify({ error: err.message }), {
+//             status: 500,
+//             headers: { "Content-Type": "application/json" },
+//         });
+//     }
+// }
+
+
+
+
+
+
+
+// import { Agent } from "@cloudflare/agents";
+
+// export async function onRequestPost(context) {
+//   const env = context.env;
+//   const { prompt } = await context.request.json();
+
+//   if (!prompt) {
+//     return new Response(
+//       JSON.stringify({ error: "Missing prompt" }),
+//       { status: 400, headers: { "Content-Type": "application/json" } }
+//     );
+//   }
+
+//   // ✅ Initialize the Agent directly from the library
+//   const agent = new Agent({
+//     llm: {
+//       provider: "workers-ai",
+//       model: "@cf/meta/llama-3.1-8b-instruct",
+//       apiKey: env.WORKERS_AI_API_TOKEN,
+//     },
+//     mcp: {
+//       // The MCP server is running on the same domain
+//       servers: [new URL(new URL(context.request.url).origin)],
+//     },
+//   });
+
+//   try {
+//     // Ask the agent to respond (automatic tool orchestration)
+//     const result = await agent.respond(prompt);
+
+//     return new Response(
+//       JSON.stringify({
+//         answer: result.output_text,
+//         tools_used: result.tools_used,
+//       }),
+//       { headers: { "Content-Type": "application/json" } }
+//     );
+//   } catch (err) {
+//     console.error(err);
+//     return new Response(
+//       JSON.stringify({ error: err.message }),
+//       { status: 500, headers: { "Content-Type": "application/json" } }
+//     );
+//   }
+// }
