@@ -2,12 +2,7 @@ name = "cf-ai-agent"
 compatibility_date = "2024-03-04"
 pages_build_output_dir = "."
 
-[[durable_objects.bindings]]
-name = "MY_AGENT"
-class_name = "MyAgent"
-script_name = "my-agent-worker"
-
-[[d1_databases]]
-binding = "devices_db"
-database_name = "devices_db"
-database_id = "892e0fbf-65f1-4701-b16f-6d9194a32400"
+# This binding tells your Pages application how to find the client-worker
+[[services]]
+binding = "CLIENT_WORKER"
+service = "client-worker"

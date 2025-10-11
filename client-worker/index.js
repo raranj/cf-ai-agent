@@ -1,10 +1,14 @@
 import { Agent } from "@cloudflare/agents";
+export class MyAgent extends Agent {}
 
 export default {
   async fetch(request, env) {
-    if (request.method !== 'POST') {
-      return new Response('Method Not Allowed', { status: 405 });
+    if (request.method === "GET") {
+      return new Response("OK", { status: 200 });
     }
+    // if (request.method !== 'POST') {
+    //   return new Response('Method Not Allowed', { status: 405 });
+    // }
 
     const { prompt } = await request.json();
 
@@ -15,7 +19,8 @@ export default {
       });
     }
 
-    const agent = new Agent({
+    console.log(`before the agent`);
+    const agent = new MyAgent({
       llm: {
         provider: "workers-ai",
         model: "@cf/meta/llama-3.1-8b-instruct",

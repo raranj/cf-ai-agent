@@ -1,14 +1,24 @@
 export async function onRequestPost({ request, env }) {
-  // Get the service binding for the client worker
-  const clientWorker = env.CLIENT_WORKER;
+  // 1. Get the public URL of the client-worker from an environment variable.
+  // const clientWorkerUrl = env.CLIENT_WORKER;
 
-  // Forward the request to the client worker and return its response
-  const response = await clientWorker.fetch(request);
+  // Optional: Log the URL for debugging.
+  // console.log(`Forwarding POST request to: ${clientWorkerUrl}`);
 
+  // if (!clientWorkerUrl) {
+  //   return new Response("CLIENT_WORKER_URL is not configured.", { status: 500 });
+  // }
+
+  // 2. Create a new POST request to forward to the client-worker's URL.
+  //    We create a new Request object to pass along the body and headers.
+  // console.log(Object.keys(context.env));
+  const response = await (env.CLIENT_WORKER.fetch(request));
+
+  // console.log(`reached: ${clientWorkerUrl}`);
+
+  // 3. Return the response from the client-worker back to the browser.
   return response;
 }
-
-
 
 
 
