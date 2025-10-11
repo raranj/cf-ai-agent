@@ -1,17 +1,30 @@
-import { Agent } from "@cloudflare/agents";
-// export class MyAgent extends Agent {}
+import { MyAgent } from "./myAgent.js";
+
+// --- Create the Agent instance once, outside fetch ---
+let agent; // Will be initialized lazily when env is available
 
 export default {
-  async fetch(request, env) {
-    if (request.method === "GET") {
-      return new Response("OK", { status: 200 });
+  async fetch(request, env, ctx) {
+    // Initialize only once per worker instance
+    if (!agent) {
+      agent = new MyAgent({
+        llm: {
+          provider: "workers-ai",
+          model: "@cf/meta/llama-3.1-8b-instruct",
+          apiKey: env.WORKERS_AI_API_TOKEN,
+        },
+        mcp: {
+          servers: [new URL(env.MCP_SERVER_URL)],
+        },
+      });
+      console.log("Agent initialized");
     }
-    // if (request.method !== 'POST') {
-    //   return new Response('Method Not Allowed', { status: 405 });
-    // }
+
+    if (request.method !== "POST") {
+      return new Response("Method Not Allowed", { status: 405 });
+    }
 
     const { prompt } = await request.json();
-
     if (!prompt) {
       return new Response(JSON.stringify({ error: "Missing prompt" }), {
         status: 400,
@@ -19,25 +32,13 @@ export default {
       });
     }
 
-    console.log(`before the agent`);
-    const agent = new Agent({
-      llm: {
-        provider: "workers-ai",
-        model: "@cf/meta/llama-3.1-8b-instruct",
-        apiKey: env.WORKERS_AI_API_TOKEN,
-      },
-      mcp: {
-        servers: [new URL(env.MCP_SERVER_URL)],
-      },
-    });
-
     try {
-      const result = await agent.respond(prompt);
-      return new Response(JSON.stringify({ answer: result.output_text }), {
+      const result = await agent.llm.respond(prompt);
+      return new Response(JSON.stringify({ output: result.output_text }), {
         headers: { "Content-Type": "application/json" },
       });
     } catch (err) {
-      console.error(err);
+      console.error("Agent error:", err);
       return new Response(JSON.stringify({ error: err.message }), {
         status: 500,
         headers: { "Content-Type": "application/json" },
@@ -45,3 +46,5 @@ export default {
     }
   },
 };
+
+export { MyAgent };

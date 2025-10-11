@@ -6,7 +6,6 @@ export default {
   }
 };
 
-// Your provided MCP code, slightly renamed to avoid conflict.
 async function handleRequest({ request, env, waitUntil }) {
   const url = new URL(request.url);
 
