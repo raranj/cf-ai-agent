@@ -1,5 +1,5 @@
 import { Agent } from "@cloudflare/agents";
-export class MyAgent extends Agent {}
+// export class MyAgent extends Agent {}
 
 export default {
   async fetch(request, env) {
@@ -20,7 +20,7 @@ export default {
     }
 
     console.log(`before the agent`);
-    const agent = new MyAgent({
+    const agent = new Agent({
       llm: {
         provider: "workers-ai",
         model: "@cf/meta/llama-3.1-8b-instruct",
