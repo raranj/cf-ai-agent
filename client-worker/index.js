@@ -76,7 +76,9 @@ export class MyAgent extends Agent {
     console.log("LLM object:", this.llm);
     // const { prompt } = await request.json();
     // const result = await this.llm.invoke({ prompt });
-    return new Response(JSON.stringify({ message: "Hello from MyAgent!" }));
+    return new Response(JSON.stringify({ msg: "hello" }), {
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }
 
