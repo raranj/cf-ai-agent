@@ -84,6 +84,6 @@ export default {
   async fetch(req, env) {
     const id = env.MY_AGENT.idFromName("singleton");
     const stub = env.MY_AGENT.get(id);
-    return stub.fetch(req);
+    return stub.fetch(req.clone());
   }
 };
