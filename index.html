@@ -86,7 +86,7 @@
 
         const data = await res.json();
         
-        answerDiv.textContent = data.answer || "No response.";
+        answerDiv.textContent = data.msg || "No response.";
       });
     </script>
   </body>
