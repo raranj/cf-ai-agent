@@ -74,9 +74,9 @@ export class MyAgent extends Agent {
   }
   async fetch(request) {
     console.log("LLM object:", this.llm);
-    const { prompt } = await request.json();
-    const result = await this.llm.invoke({ prompt });
-    return new Response(JSON.stringify({ result }));
+    // const { prompt } = await request.json();
+    // const result = await this.llm.invoke({ prompt });
+    return new Response(JSON.stringify({ message: "Hello from MyAgent!" }));
   }
 }
 

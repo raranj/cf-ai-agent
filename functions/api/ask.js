@@ -12,8 +12,16 @@ export async function onRequestPost({ request, env }) {
   // 2. Create a new POST request to forward to the client-worker's URL.
   //    We create a new Request object to pass along the body and headers.
   // console.log(Object.keys(context.env));
-  const response = await (env.CLIENT_WORKER.fetch(request));
+  const rawBody = await request.text();
+  console.log("📦 Body:", rawBody);
 
+  const body = JSON.parse(rawBody);
+  const response = await env.CLIENT_WORKER.fetch("https://dummy-url", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  
   // console.log(`reached: ${clientWorkerUrl}`);
 
   // 3. Return the response from the client-worker back to the browser.
