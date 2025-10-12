@@ -21,6 +21,8 @@ export async function onRequestPost({ request, env }) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
   });
+  console.log("Response:", response.clone().json());
+  
   
   // console.log(`reached: ${clientWorkerUrl}`);
 
