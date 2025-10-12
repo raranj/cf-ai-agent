@@ -81,12 +81,12 @@
           body: JSON.stringify({ prompt }),
         });
 
-        const rawBody = await res.text();
-        console.log("📦 Body :", rawBody);
+        // const rawBody = await res.text();
+        // console.log("📦 Body :", rawBody);
 
-        // const data = await res.json();
+        const data = await res.json();
         
-        answerDiv.textContent = rawBody || "No response.";
+        answerDiv.textContent = data.answer || "No response.";
       });
     </script>
   </body>
