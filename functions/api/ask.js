@@ -19,7 +19,7 @@ export async function onRequestPost({ request, env }) {
   const response = await env.CLIENT_WORKER.fetch("https://dummy-url", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
+    prompt: JSON.stringify(body),
   });
   console.log("Response:", response.clone().json());
   

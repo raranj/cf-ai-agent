@@ -75,18 +75,24 @@ export class MyAgent extends Agent {
   async fetch(request) {
     console.log("LLM object:", this.llm);
 
-    // const { prompt } = await request.json();
-    const textRequest = await request.text();
-    console.log('Request Text:' + textRequest);
-    // const result = await this.llm.invoke({ prompt });
+    const { prompt } = await request.json();
+    // const textRequest = await request.text();
+    // console.log('Request Text:' + textRequest);
+    const result = await this.llm.invoke({ prompt });
     // const rawBody = await result.text();
     // console.log("LLM Response:", rawBody);
-    // return new Response(JSON.stringify({ msg: rawBody }), {
+    // return new Response(JSON.stringify({ msg: result }), {
     //   headers: { "Content-Type": "application/json" },
     // });
-    return new Response(JSON.stringify({ message: "Hello from MyAgent!" }), {
-      headers: { "Content-Type": "application/json" },
-    });
+
+    return new Response(
+      JSON.stringify({ msg: result.output_text ?? "" }),
+      { headers: { "content-type": "application/json" } }
+    );
+
+    // return new Response(JSON.stringify({ message: "Hello from MyAgent!" }), {
+    //   headers: { "Content-Type": "application/json" },
+    // });
   }
 }
 
