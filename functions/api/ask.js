@@ -15,11 +15,17 @@ export async function onRequestPost({ request, env }) {
   const rawBody = await request.text();
   console.log("📦 Body:", rawBody);
 
-  const body = JSON.parse(rawBody);
-  const response = await env.CLIENT_WORKER.fetch("https://dummy-url", {
+  const prompt = JSON.parse(rawBody);
+  // const response = await env.CLIENT_WORKER.fetch("https://dummy-url", {
+  //   method: "POST",
+  //   headers: { "Content-Type": "application/json" },
+  //   body: JSON.stringify(body),
+  // });
+
+  const response = await env.CLIENT_WORKER.fetch("https://agent/ask", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    prompt: JSON.stringify(body),
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ prompt }), 
   });
   console.log("Response:", response.clone().json());
   
