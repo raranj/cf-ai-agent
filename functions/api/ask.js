@@ -15,7 +15,7 @@ export async function onRequestPost({ request, env }) {
   const rawBody = await request.text();
   console.log("📦 Body:", rawBody);
 
-  const prompt = JSON.parse(rawBody);
+  const { prompt } = JSON.parse(rawBody);
   // const response = await env.CLIENT_WORKER.fetch("https://dummy-url", {
   //   method: "POST",
   //   headers: { "Content-Type": "application/json" },
@@ -27,13 +27,15 @@ export async function onRequestPost({ request, env }) {
     headers: { "content-type": "application/json" },
     body: JSON.stringify({ prompt }), 
   });
-  console.log("Response:", response.clone().json());
-  
-  
-  // console.log(`reached: ${clientWorkerUrl}`);
 
-  // 3. Return the response from the client-worker back to the browser.
-  return response;
+  // console.log("Response:", response.clone().json());
+  // return response;
+
+  const data = await response.json();
+  return new Response(JSON.stringify(data), {
+    headers: { "content-type": "application/json" },
+    status: response.status
+  });
 }
 
 

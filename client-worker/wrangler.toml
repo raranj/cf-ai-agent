@@ -12,7 +12,6 @@ new_classes = [ "MyAgent" ]
 
 [vars]
 MCP_SERVER_URL = "https://server-worker.raranj.workers.dev"
-WORKERS_AI_API_TOKEN = "jIkXYHw1sNPJiETxsjuzylAmHeD7xQrVzzcDfla0"
 
 [observability]
 enabled = false

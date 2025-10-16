@@ -64,7 +64,7 @@ export class MyAgent extends Agent {
         llm: {
           provider: "workers-ai",
           model: "@cf/meta/llama-3.1-8b-instruct",
-          apiKey: env.WORKERS_AI_API_TOKEN,
+          // apiKey: env.WORKERS_AI_API_TOKEN,
         }
         // mcp: {
         //   servers: [new URL(env.MCP_SERVER_URL)],
@@ -72,13 +72,30 @@ export class MyAgent extends Agent {
 
       });
   }
+  
   async fetch(request) {
     console.log("LLM object:", this.llm);
+    console.log("Type of this.llm:", typeof this.llm);
+    console.log("this.llm is", this.llm === undefined ? "undefined" : "defined");
+    if (this.llm) {
+      console.log("LLM provider:", this.llm.provider);
+    } else {
+      console.log("LLM is undefined");
+    }
 
     const { prompt } = await request.json();
     // const textRequest = await request.text();
     // console.log('Request Text:' + textRequest);
-    const result = await this.llm.invoke(prompt);
+
+
+
+
+
+    // const result = await this.llm.invoke(prompt);
+
+    const result = await this.env.AI.run("@cf/meta/llama-3.1-8b-instruct", {
+      prompt: prompt,
+    });
     // const rawBody = await result.text();
     // console.log("LLM Response:", rawBody);
     // return new Response(JSON.stringify({ msg: result }), {
@@ -86,7 +103,7 @@ export class MyAgent extends Agent {
     // });
 
     return new Response(
-      JSON.stringify({ msg: result.output_text ?? "" }),
+      JSON.stringify({ msg: result.response ?? "" }),
       { headers: { "content-type": "application/json" } }
     );
 
