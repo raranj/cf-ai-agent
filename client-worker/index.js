@@ -1,117 +1,80 @@
-// import { MyAgent } from "./myAgent.js";
+// import { Agent } from "@cloudflare/agents";
+// export class MyAgent extends Agent {
+//     constructor(state, env) {
+//       super(state, env, {
+//         llm: {
+//           provider: "workers-ai",
+//           model: "@cf/meta/llama-3.1-8b-instruct",
+//           // apiKey: env.WORKERS_AI_API_TOKEN,
+//         }
+//         // mcp: {
+//         //   servers: [new URL(env.MCP_SERVER_URL)],
+//         // },
 
-// // let stub; // Will be initialized lazily when env is available
+//       });
+//   }
 
-// export default {
-//   async fetch(request, env, ctx) {
-//     // Initialize only once per worker instance
-//     //if (!stub) {
-//       const id = env.MY_AGENT.idFromName("mcpClientDO");
-//       const stub = env.MY_AGENT.get(id);
-//       // return stub.fetch(request);
+//   async fetch(request) {
+//     console.log("LLM object:", this.llm);
+//     console.log("Type of this.llm:", typeof this.llm);
+//     console.log("this.llm is", this.llm === undefined ? "undefined" : "defined");
+//     if (this.llm) {
+//       console.log("LLM provider:", this.llm.provider);
+//     } else {
+//       console.log("LLM is undefined");
+//     }
 
-//       // agent = new env.MY_AGENT(null, env, {
-//       //   llm: {
-//       //     provider: "workers-ai",
-//       //     model: "@cf/meta/llama-3.1-8b-instruct",
-//       //     apiKey: env.WORKERS_AI_API_TOKEN,
-//       //   },
-//       //   mcp: {
-//       //     servers: [new URL(env.MCP_SERVER_URL)],
-//       //   },
-//       // });
-//     // }
-//     console.log("Agent initialized");
-//     console.log("Exported keys:", Object.keys(globalThis));
-//     console.log(MyAgent);
-//     console.log("Exports from module:", Object.keys(await import("./index.js")));
-//     return stub.fetch(request);
+//     const { prompt } = await request.json();
+//     // const textRequest = await request.text();
+//     // console.log('Request Text:' + textRequest);
 
-    // if (request.method !== "POST") {
-    //   return new Response("Method Not Allowed", { status: 405 });
-    // }
+//     // const result = await this.llm.invoke(prompt);
 
-    // const { prompt } = await request.json();
-    // if (!prompt) {
-    //   return new Response(JSON.stringify({ error: "Missing prompt" }), {
-    //     status: 400,
-    //     headers: { "Content-Type": "application/json" },
-    //   });
-    // }
+//     const result = await this.env.AI.run("@cf/meta/llama-3.1-8b-instruct", {
+//       prompt: prompt,
+//     });
+//     // const rawBody = await result.text();
+//     // console.log("LLM Response:", rawBody);
+//     // return new Response(JSON.stringify({ msg: result }), {
+//     //   headers: { "Content-Type": "application/json" },
+//     // });
 
-    // try {
-    //   const result = await agent.llm.respond(prompt);
-    //   return new Response(JSON.stringify({ output: result.output_text }), {
-    //     headers: { "Content-Type": "application/json" },
-    //   });
-    // } catch (err) {
-    //   console.error("Agent error:", err);
-    //   return new Response(JSON.stringify({ error: err.message }), {
-    //     status: 500,
-    //     headers: { "Content-Type": "application/json" },
-    //   });
-    // }
-//   },
-// };
+//     return new Response(
+//       JSON.stringify({ msg: result.response ?? "" }),
+//       { headers: { "content-type": "application/json" } }
+//     );
 
-// export { MyAgent };
+//     // return new Response(JSON.stringify({ message: "Hello from MyAgent!" }), {
+//     //   headers: { "Content-Type": "application/json" },
+//     // });
+//   }
+// }
 
-
-import { Agent } from "@cloudflare/agents";
+import { Agent, createWorkersAI } from "agents";
 export class MyAgent extends Agent {
-    constructor(state, env) {
-      super(state, env, {
-        llm: {
-          provider: "workers-ai",
-          model: "@cf/meta/llama-3.1-8b-instruct",
-          // apiKey: env.WORKERS_AI_API_TOKEN,
-        }
-        // mcp: {
-        //   servers: [new URL(env.MCP_SERVER_URL)],
-        // },
-
-      });
-  }
-  
-  async fetch(request) {
-    console.log("LLM object:", this.llm);
-    console.log("Type of this.llm:", typeof this.llm);
-    console.log("this.llm is", this.llm === undefined ? "undefined" : "defined");
-    if (this.llm) {
-      console.log("LLM provider:", this.llm.provider);
-    } else {
-      console.log("LLM is undefined");
-    }
-
-    const { prompt } = await request.json();
-    // const textRequest = await request.text();
-    // console.log('Request Text:' + textRequest);
-
-
-
-
-
-    // const result = await this.llm.invoke(prompt);
-
-    const result = await this.env.AI.run("@cf/meta/llama-3.1-8b-instruct", {
-      prompt: prompt,
+  constructor(state, env) {
+    super(state, env);
+    // ✅ explicitly create an LLM interface
+    this.llm = createWorkersAI(env.AI, {
+      model: "@cf/meta/llama-3.1-8b-instruct"
     });
-    // const rawBody = await result.text();
-    // console.log("LLM Response:", rawBody);
-    // return new Response(JSON.stringify({ msg: result }), {
-    //   headers: { "Content-Type": "application/json" },
-    // });
+  }
 
-    return new Response(
-      JSON.stringify({ msg: result.response ?? "" }),
-      { headers: { "content-type": "application/json" } }
-    );
+  async fetch(request) {
+    const { prompt } = await request.json();
 
-    // return new Response(JSON.stringify({ message: "Hello from MyAgent!" }), {
-    //   headers: { "Content-Type": "application/json" },
-    // });
+    console.log('This LLM: ' + this.llm);
+    const result = await this.llm.invoke(prompt);
+    
+
+    console.log("AI result:", result);
+    return new Response(result.output_text, {
+      headers: { "content-type": "text/plain" }
+    });
   }
 }
+
+
 
 export default {
   async fetch(req, env) {
@@ -120,3 +83,17 @@ export default {
     return stub.fetch(req.clone());
   }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
