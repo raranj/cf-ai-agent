@@ -6,3 +6,11 @@ compatibility_date = "2024-03-04"
 binding = "devices_db"
 database_name = "devices_db"
 database_id = "892e0fbf-65f1-4701-b16f-6d9194a32400"
+
+[observability]
+enabled = false
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+invocation_logs = true

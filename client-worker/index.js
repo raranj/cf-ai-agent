@@ -50,49 +50,114 @@
 //   }
 // }
 
-import { Agent, createWorkersAI } from "agents";
-export class MyAgent extends Agent {
-  constructor(state, env) {
-    super(state, env);
-    // ✅ explicitly create an LLM interface
-    this.llm = createWorkersAI(env.AI, {
-      model: "@cf/meta/llama-3.1-8b-instruct"
-    });
-  }
 
-  async fetch(request) {
-    const { prompt } = await request.json();
 
-    console.log('This LLM: ' + this.llm);
-    const result = await this.llm.invoke(prompt);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { Agent, createWorkersAI } from "agents";
+// export class MyAgent extends Agent {
+//   constructor(state, env) {
+//     super(state, env);
+//     // ✅ explicitly create an LLM interface
+//     this.llm = createWorkersAI(env.AI, {
+//       model: "@cf/meta/llama-3.1-8b-instruct"
+//     });
+//   }
+
+//   async fetch(request) {
+//     const { prompt } = await request.json();
+
+//     console.log('This LLM: ' + this.llm);
+//     const result = await this.llm.invoke(prompt);
     
 
-    console.log("AI result:", result);
-    return new Response(result.output_text, {
-      headers: { "content-type": "text/plain" }
+//     console.log("AI result:", result);
+//     return new Response(result.output_text, {
+//       headers: { "content-type": "text/plain" }
+//     });
+//   }
+// }
+
+
+
+// export default {
+//   async fetch(req, env) {
+//     const id = env.MY_AGENT.idFromName("singleton");
+//     const stub = env.MY_AGENT.get(id);
+//     return stub.fetch(req.clone());
+//   }
+// };
+
+
+
+
+
+
+
+
+
+
+import { Agent } from "@cloudflare/agents";
+export class MyAgent extends Agent {
+  constructor(state, env) {
+    super(state, env, {
+      llm: {
+        provider: "workers-ai",
+        model: "@cf/meta/llama-3.1-8b-instruct",
+        // apiKey: env.WORKERS_AI_API_TOKEN,
+      },
+      mcp: {
+        servers: [new URL(env.MCP_SERVER_URL)],
+      }
     });
   }
+  
+  async fetch(request) {
+    const { prompt } = await request.json();
+        // console.log('THIS LLM: ' + this.llm)
+    console.log('before env.AI.run  ');
+    // this.llm = this.env.AI("@cf/meta/llama-3.1-8b-instruct");
+    // console.log('THIS LLM: ' + this.llm);
+    // this.llm.invoke(prompt);
+    
+    const result = await this.env.AI.run("@cf/meta/llama-3.1-8b-instruct", {
+      prompt: prompt,
+    });
+    // const result = await this.env.AI.run(prompt);
+    console.log('output: ' + result.response );
+    return new Response(
+      JSON.stringify({ msg: result.response ?? ""}),
+      { headers: { "content-type": "application/json" } }
+    );
+  }
 }
-
-
 
 export default {
   async fetch(req, env) {
     const id = env.MY_AGENT.idFromName("singleton");
     const stub = env.MY_AGENT.get(id);
     return stub.fetch(req.clone());
-  }
+  },
 };
-
-
-
-
-
-
-
-
-
-
 
 
 
