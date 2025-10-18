@@ -52,27 +52,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import { Agent, createWorkersAI } from "agents";
 // export class MyAgent extends Agent {
 //   constructor(state, env) {
@@ -111,37 +90,51 @@
 
 
 
+// import { MCPClientManager } from "agents";
+import { Agent } from "agents";
 
-
-
-
-
-import { Agent } from "@cloudflare/agents";
 export class MyAgent extends Agent {
   constructor(state, env) {
-    super(state, env, {
-      llm: {
-        provider: "workers-ai",
-        model: "@cf/meta/llama-3.1-8b-instruct",
-        // apiKey: env.WORKERS_AI_API_TOKEN,
-      },
-      mcp: {
-        servers: [new URL(env.MCP_SERVER_URL)],
-      }
-    });
+    // super(state, env, {
+    //   llm: {
+    //     provider: "workers-ai",
+    //     model: "@cf/meta/llama-3.1-8b-instruct",
+    //     // apiKey: env.WORKERS_AI_API_TOKEN,
+    //   },
+    //   mcp: {
+    //     servers: [new URL(env.MCP_SERVER_URL)],
+    //   }
+    // });
+    super(state, env);
+
   }
   
   async fetch(request) {
     const { prompt } = await request.json();
         // console.log('THIS LLM: ' + this.llm)
+
+    // const mcpClient = new MCPClientManager({
+    //   servers: [new URL(env.MCP_SERVER_URL)],
+    // });
+    // await mcpClient.connect();
+
+    await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL, "http://localhost:5173");
+    const tools = this.mcp.listTools();
+    console.log('TOOLS: ' + tools);
+
     console.log('before env.AI.run  ');
-    // this.llm = this.env.AI("@cf/meta/llama-3.1-8b-instruct");
-    // console.log('THIS LLM: ' + this.llm);
-    // this.llm.invoke(prompt);
+    const result = await this.env.AI.run("@cf/meta/llama-3.1-8b-instruct",
+      {
+        messages: [
+          { role: "user", content: prompt }
+        ],
+        tools: tools
+      }
+    );
     
-    const result = await this.env.AI.run("@cf/meta/llama-3.1-8b-instruct", {
-      prompt: prompt,
-    });
+    // const result = await this.env.AI.run("@cf/meta/llama-3.1-8b-instruct", {
+    //   prompt: prompt,
+    // });
     // const result = await this.env.AI.run(prompt);
     console.log('output: ' + result.response );
     return new Response(
@@ -155,9 +148,19 @@ export default {
   async fetch(req, env) {
     const id = env.MY_AGENT.idFromName("singleton");
     const stub = env.MY_AGENT.get(id);
+    stub.setName("singleton");
     return stub.fetch(req.clone());
   },
 };
+
+
+
+
+
+
+
+
+
 
 
 

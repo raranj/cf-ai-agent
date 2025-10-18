@@ -1,7 +1,5 @@
 {
   "dependencies": {
-    "@cloudflare/agents": "^0.0.16",
-    "agents": "^0.2.13",
-    "agents-sdk": "^1.0.0"
+    "agents": "^0.2.14"
   }
 }
