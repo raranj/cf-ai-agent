@@ -32,11 +32,18 @@ async function handleRequest({ request, env, waitUntil }) {
     });
   }
 
+  if (request.method === "GET" && url.pathname === "/") {
+    return new Response("MCP server is running!", {
+      headers: { "content-type": "text/plain" },
+    });
+  }
+
   // --- JSON-RPC POST handler ---
   if (request.method === "POST" && url.pathname === "/mcp") {
     let body;
     try {
       body = await request.json();
+      console.log('Request: ' + body);
     } catch {
       return new Response(JSON.stringify({ error: "Invalid JSON" }), {
         status: 400,
@@ -45,6 +52,8 @@ async function handleRequest({ request, env, waitUntil }) {
     }
 
     const { id = null, method, params } = body;
+    console.log('Method: ' + method);
+    console.log('Params: ' + params);
 
     // ---- Initialize ----
     if (method === "initialize") {

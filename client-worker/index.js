@@ -112,6 +112,7 @@ export class MyAgent extends Agent {
   async fetch(request) {
     const { prompt } = await request.json();
         // console.log('THIS LLM: ' + this.llm)
+    console.log('before mcp server ');
 
     // const mcpClient = new MCPClientManager({
     //   servers: [new URL(env.MCP_SERVER_URL)],
@@ -121,6 +122,10 @@ export class MyAgent extends Agent {
     await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL, "http://localhost:5173");
     const tools = this.mcp.listTools();
     console.log('TOOLS: ' + tools);
+
+    for (const tool of tools) {
+      console.log(`🧰 ${tool.name}: ${tool.description}`);
+    }
 
     console.log('before env.AI.run  ');
     const result = await this.env.AI.run("@cf/meta/llama-3.1-8b-instruct",
