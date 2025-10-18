@@ -39,7 +39,7 @@ async function handleRequest({ request, env, waitUntil }) {
   }
 
   // --- JSON-RPC POST handler ---
-  if (request.method === "POST" && url.pathname === "/mcp") {
+  if (request.method === "POST" && (url.pathname === "/mcp" || url.pathname === "/")) {
     let body;
     try {
       body = await request.json();
@@ -69,6 +69,11 @@ async function handleRequest({ request, env, waitUntil }) {
         }),
         { headers: { "Content-Type": "application/json" } }
       );
+    }
+
+    if (method === "notifications/initialized") {
+      console.log("✅ MCP client initialized — session is ready.");
+      return new Response(null, { status: 204 });
     }
 
     // ---- List tools ----

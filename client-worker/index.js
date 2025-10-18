@@ -106,21 +106,43 @@ export class MyAgent extends Agent {
     //   }
     // });
     super(state, env);
+    this.initialized = false;
 
   }
   
   async fetch(request) {
     const { prompt } = await request.json();
         // console.log('THIS LLM: ' + this.llm)
-    console.log('before mcp server ');
+    console.log('before mcp server ' + this.mcp);
 
     // const mcpClient = new MCPClientManager({
     //   servers: [new URL(env.MCP_SERVER_URL)],
     // });
     // await mcpClient.connect();
+    
+    if (!this.initialized) {
+      await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL, "http://localhost:5173")
+        .then(() => {
+        console.log("mcpServer added", "server-worker", this.env.MCP_SERVER_URL);
+         this.initialized = true;
+      }) 
+      .catch((error) => {
+        console.error("mcpServer addition failed", error);
+      });
+    }
 
-    await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL, "http://localhost:5173");
-    const tools = this.mcp.listTools();
+
+    // await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL, "http://localhost:5173")
+      // .then(() => {
+      //   console.log("mcpServer added", "server-worker", this.env.MCP_SERVER_URL);
+      // }) 
+      // .catch((error) => {
+      //   console.error("mcpServer addition failed", error);
+      // });
+
+    console.log('after mcp server ' + this.mcp);
+    console.log('this.mcp.listTools(): ' + this.mcp.listTools);
+    const tools = await this.mcp.listTools();
     console.log('TOOLS: ' + tools);
 
     for (const tool of tools) {
