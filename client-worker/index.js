@@ -112,9 +112,12 @@ export class MyAgent extends Agent {
   }
   
   async fetch(paramRequest) {
+    // console.log("top of agent fetch", getCurrentAgent());
+    const ctx = getCurrentAgent();
+    console.log("Ctx: ", ctx);
     const { prompt } = await paramRequest.json();
         // console.log('THIS LLM: ' + this.llm)
-    console.log('before mcp server ' + this.mcp);
+    console.log('before mcp server ', this.mcp);
 
     // const mcpClient = new MCPClientManager({
     //   servers: [new URL(env.MCP_SERVER_URL)],
@@ -130,7 +133,11 @@ export class MyAgent extends Agent {
     }
     console.log("Request context?", request ? "present" : "undefined");
     
-    await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL);
+    await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL, "https://client-worker.raranj.workers.dev");
+  
+    console.log("⏳ Waiting 5 seconds before listing tools...");
+    await new Promise(resolve => setTimeout(resolve, 5000));
+
     console.log("mcpServer added", "server-worker", this.env.MCP_SERVER_URL);
     this.initialized = true;
 
@@ -142,10 +149,10 @@ export class MyAgent extends Agent {
       //   console.error("mcpServer addition failed", error);
       // });
 
-    console.log('after mcp server ' + this.mcp);
-    console.log('this.mcp.listTools(): ' + this.mcp.listTools);
-    const tools = await Object.values(this.mcp.getAITools());;
-    console.log('TOOLS: ' + tools);
+    console.log('after mcp server ', this.mcp);
+    console.log('this.mcp.listTools(): ', this.mcp.listTools);
+    const tools = Object.values(this.mcp.getAITools());
+    console.log("TOOLS: ", tools);
 
     for (const tool of tools) {
       console.log(`🧰 ${tool.name}: ${tool.description}`);
