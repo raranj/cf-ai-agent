@@ -93,6 +93,7 @@
 // import { MCPClientManager } from "agents";
 import { Agent } from "agents";
 
+import { getCurrentAgent } from "agents";
 export class MyAgent extends Agent {
   constructor(state, env) {
     // super(state, env, {
@@ -119,17 +120,13 @@ export class MyAgent extends Agent {
     //   servers: [new URL(env.MCP_SERVER_URL)],
     // });
     // await mcpClient.connect();
+
+    const { tmpRequest } = getCurrentAgent();
+    console.log("Request context?", tmpRequest ? "present" : "undefined");
     
-    if (!this.initialized) {
-      await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL)
-        .then(() => {
-        console.log("mcpServer added", "server-worker", this.env.MCP_SERVER_URL, this.env.MCP_SERVER_URL);
-         this.initialized = true;
-      }) 
-      .catch((error) => {
-        console.error("mcpServer addition failed", error);
-      });
-    }
+    await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL);
+    console.log("mcpServer added", "server-worker", this.env.MCP_SERVER_URL);
+    this.initialized = true;
 
 
     // await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL, "http://localhost:5173")
