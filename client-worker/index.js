@@ -123,7 +123,7 @@ export class MyAgent extends Agent {
     if (!this.initialized) {
       await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL)
         .then(() => {
-        console.log("mcpServer added", "server-worker", this.env.MCP_SERVER_URL);
+        console.log("mcpServer added", "server-worker", this.env.MCP_SERVER_URL, this.env.MCP_SERVER_URL);
          this.initialized = true;
       }) 
       .catch((error) => {
