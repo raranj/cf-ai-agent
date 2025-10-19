@@ -111,8 +111,8 @@ export class MyAgent extends Agent {
 
   }
   
-  async fetch(request) {
-    const { prompt } = await request.json();
+  async fetch(paramRequest) {
+    const { prompt } = await paramRequest.json();
         // console.log('THIS LLM: ' + this.llm)
     console.log('before mcp server ' + this.mcp);
 
@@ -122,13 +122,13 @@ export class MyAgent extends Agent {
     // await mcpClient.connect();
 
     // const { tmpRequest } = getCurrentAgent();
-    const { tmpRequest } = getCurrentAgent();
-    if (!tmpRequest) {
+    const { request } = getCurrentAgent();
+    if (!request) {
         console.log("Request context undefined")
     } else {
         console.log("Request context present")
     }
-    console.log("Request context?", tmpRequest ? "present" : "undefined");
+    console.log("Request context?", request ? "present" : "undefined");
     
     await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL);
     console.log("mcpServer added", "server-worker", this.env.MCP_SERVER_URL);
