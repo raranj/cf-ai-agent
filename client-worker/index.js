@@ -121,7 +121,7 @@ export class MyAgent extends Agent {
     // await mcpClient.connect();
     
     if (!this.initialized) {
-      await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL, "http://localhost:5173")
+      await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL)
         .then(() => {
         console.log("mcpServer added", "server-worker", this.env.MCP_SERVER_URL);
          this.initialized = true;
@@ -142,7 +142,7 @@ export class MyAgent extends Agent {
 
     console.log('after mcp server ' + this.mcp);
     console.log('this.mcp.listTools(): ' + this.mcp.listTools);
-    const tools = await this.mcp.listTools();
+    const tools = await Object.values(this.mcp.getAITools());;
     console.log('TOOLS: ' + tools);
 
     for (const tool of tools) {
