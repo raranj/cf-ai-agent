@@ -121,13 +121,18 @@ export class MyAgent extends Agent {
     // });
     // await mcpClient.connect();
 
+    // const { tmpRequest } = getCurrentAgent();
     const { tmpRequest } = getCurrentAgent();
+    if (!tmpRequest) {
+        console.log("Request context undefined")
+    } else {
+        console.log("Request context present")
+    }
     console.log("Request context?", tmpRequest ? "present" : "undefined");
     
     await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL);
     console.log("mcpServer added", "server-worker", this.env.MCP_SERVER_URL);
     this.initialized = true;
-
 
     // await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL, "http://localhost:5173")
       // .then(() => {
