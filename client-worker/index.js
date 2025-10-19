@@ -133,13 +133,26 @@ export class MyAgent extends Agent {
     }
     console.log("Request context?", request ? "present" : "undefined");
     
-    await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL, "https://client-worker.raranj.workers.dev");
-  
+    if (!this.initialized) {
+      await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL, "https://client-worker.raranj.workers.dev");
+      await this.mcp.ready;
+      console.log("mcpServer added", "server-worker", this.env.MCP_SERVER_URL);
+
+      const mytools = Object.values(this.mcp.getAITools()) ;
+      console.log("MYTOOLS: ", mytools);
+      this.initialized = true;
+    }
+
+    
+    
+    return new Response(
+      JSON.stringify({ msg: "returning early"}),
+      { headers: { "content-type": "application/json" } }
+    );
+
+
     // console.log("⏳ Waiting 5 seconds before listing tools...");
     // await new Promise(resolve => setTimeout(resolve, 5000));
-
-    console.log("mcpServer added", "server-worker", this.env.MCP_SERVER_URL);
-    this.initialized = true;
 
     // await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL, "http://localhost:5173")
       // .then(() => {
@@ -151,7 +164,7 @@ export class MyAgent extends Agent {
 
     console.log('after mcp server ', this.mcp);
     console.log('this.mcp.listTools(): ', this.mcp.listTools);
-    const tools = Object.values(this.mcp.getAITools());
+    const tools = await this.mcp.listTools();
     console.log("TOOLS: ", tools);
 
     for (const tool of tools) {
