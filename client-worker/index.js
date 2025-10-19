@@ -135,8 +135,8 @@ export class MyAgent extends Agent {
     
     await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL, "https://client-worker.raranj.workers.dev");
   
-    console.log("⏳ Waiting 5 seconds before listing tools...");
-    await new Promise(resolve => setTimeout(resolve, 5000));
+    // console.log("⏳ Waiting 5 seconds before listing tools...");
+    // await new Promise(resolve => setTimeout(resolve, 5000));
 
     console.log("mcpServer added", "server-worker", this.env.MCP_SERVER_URL);
     this.initialized = true;
