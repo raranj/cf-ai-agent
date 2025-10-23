@@ -1,4 +1,3 @@
-
 import { Agent } from "agents";
 
 import { getCurrentAgent } from "agents";
@@ -35,11 +34,6 @@ export class MyAgent extends Agent {
       console.log("normTOOLS: ", normalizedTools);
       this.initialized = true;
     // }
-    
-    // return new Response(
-    //   JSON.stringify({ msg: "returning early"}),
-    //   { headers: { "content-type": "application/json" } }
-    // );
 
     for (const tool of normalizedTools) {
       console.log(`🧰tool name: ${tool.name}: ${tool.description}`);
@@ -57,20 +51,30 @@ export class MyAgent extends Agent {
 
     console.log('result: ', result);
 
-    return new Response(
-      JSON.stringify({ msg: "returning early"}),
-      { headers: { "content-type": "application/json" } }
-    );
+    var call = null;
+    var args = null;
+    var toolResult = null;
+    if (result.tool_calls && result.tool_calls.length > 0) {
+      call = result.tool_calls[0];
+      console.log(`Calling tool: ${call.name} with`, call.arguments);
+      args = call.parameters ?? call.arguments ?? {};
+      console.log("connection id ONE: ", connId.id);
+      toolResult = await this.mcp.callTool({name: call.name, arguments: args, serverId: connId.id});
+      console.log('toolResult: ', toolResult);
+    }
 
-    
-    // const result = await this.env.AI.run("@cf/meta/llama-3.1-8b-instruct", {
-    //   prompt: prompt,
-    // });
-    // const result = await this.env.AI.run(prompt);
-    console.log('output: ' + result.response );
+    var toolResultText = toolResult.content?.[0]?.text ?? JSON.stringify(toolResult);
+    var finalResponse = await this.env.AI.run("@cf/meta/llama-3.3-70b-instruct-fp8-fast", {
+      messages: [
+        { role: "user", content: prompt },
+        { role: "assistant", content: `Calling tool ${call.name} with args ${JSON.stringify(args)}` },
+        { role: "tool", name: call.name, content: toolResultText }        ]
+    });
+
+    console.log("Final response: " + finalResponse.response);
     return new Response(
-      JSON.stringify({ msg: result.response ?? ""}),
-      { headers: { "content-type": "application/json" } }
+      JSON.stringify({ msg: finalResponse.response }),
+      { headers: { "Content-Type": "application/json" } }
     );
   }
 }
