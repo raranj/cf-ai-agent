@@ -1,0 +1,3635 @@
+{
+    "wallTime": 365,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "3c1fdc41fb138e7f3bc538ef9148223109128dd730b206895234664b65ebba06",
+    "scriptVersion": {
+        "id": "7b809758-9fa4-480e-bb21-2a43cf4da9bb"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761179698928,
+    "event": {
+        "rpcMethod": ""
+    }
+}
+{
+    "wallTime": 639,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "exception",
+    "scriptVersion": {
+        "id": "7b809758-9fa4-480e-bb21-2a43cf4da9bb"
+    },
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [
+        {
+            "name": "Error",
+            "message": "Too many subrequests.",
+            "timestamp": 1761179699553
+        }
+    ],
+    "logs": [],
+    "eventTimestamp": 1761179698787,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json"
+            }
+        }
+    }
+}
+{
+    "wallTime": 582,
+    "cpuTime": 214,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "exception",
+    "durableObjectId": "3c1fdc41fb138e7f3bc538ef9148223109128dd730b206895234664b65ebba06",
+    "scriptVersion": {
+        "id": "7b809758-9fa4-480e-bb21-2a43cf4da9bb"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [
+        {
+            "name": "Error",
+            "message": "Too many subrequests.",
+            "timestamp": 1761179699375
+        }
+    ],
+    "logs": [
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "ifEaPs2Ar7eLWD0VSdKoQ"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "2KD6Z_ZxdYACNZEjLGy9b"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "RiLYf7_weiAo4ZGj8sRUg"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "wIACDiQwJTof6WRAGMC_J"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "xfNRbeT82-GYtu5gnNeC6"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "VoZLON7sct8Q2MYRYzLl7"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "eiGq6PFvqxP0aPau5ELYJ"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "EfCLuPph0UcteIzBIJ7tp"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "v6ztSVVSisaKotxBF5Ywe"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "Ct4GnTHr9U_FuYroMKbWJ"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "ctPgJ4bgYa-laOPTuJgji"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "qrJwGgpUH_W3JXra8zi-Z"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "_WLTnL8sT5mqaeNmi3XnC"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "4hzNReLfpUfrg17lzb5r4"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "OUdxufr9RdrGaTfV9WVle"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "6v0ciqHQKXexoa_LqOast"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "-OR_BJRsKbMHxVsO9vahZ"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "zSIqcpTbwH_k_D7a60-Vw"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "YuLA7pj4_u6Fz47jqVVwk"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "xCv9h8kTr_V0wLIbYOmi3"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "_fnOXMKzVONise3gF4RUa"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "zibx19uhc5y11F88hHLLX"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "xLLU9otsQu-EOPXlIpL0K"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "3Gh9CbsAa63XTUWboXbKX"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "bQ1yLsMjAETujP2aeC_KJ"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "cvy2zT2uMTBeDr3dylhWr"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "2NiDjGClrTR7cor3IhdIf"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "pONlRYHLv4nmKYF1ygJmw"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "vFqI9RoxjTw83JB_yBr7e"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "Zcwp-L5wYfPeyhsuNN7e0"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "FmJeb_iMdqk_xEtjgBdEO"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "8ODToMLUtC8wN9a7e7s6U"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "DDrMY1ydBIW6r3AUFjqxe"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "lu_VIASAfvo9XNp3XJroV"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "D9AXAyU4GWSx4C2FAww8o"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "YMpKulLhtZ54CWSYW6YZq"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "KPfCeZtWSt8uoTOZhaVmS"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "LD9U6WNNynFLCGBQhWEl8"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "oFZb6Djk7mnCcn8ARw73C"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "9FhnKdU3WWblzq6jro59O"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "2C4QbNt3hoj3q4qcrX2ra"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "Qi0qqKsL55OhatFaB-nb6"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "LJy11BKerHjzxWCFunM8R"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "DnQHIYwBmhqSScKsYaFH2"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "pbIfDk7unA1i-6tDSE8AR"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "MgIw7K49pKIN6D2n2vqlb"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "XmsoKOovAbMymfSuDnyjx"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "6UEkrcW4or1_lDt3GQE6R"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "gVPz5_hOVGtHrIrhKTz9B"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "b_bb-pzmXd66wEe1d14HG"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "Tqft4KYf4vyKXtclZl6pl"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "oMwsQvzECrH8rkMaYuObB"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "4kfArMp1Zq4e_Ip5vUcdS"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "-55KaYedj1aoeb9Cv3BaI"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "xSxBtPkEMDO0ePcN7YP6R"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "q5vZcTEN5Wfhydguoxj6G"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "yLOpnyxWSQoDFyvQS50SL"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "2_21jQbyuvbj3D5-IVl6w"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "ORygWqhAVWw9tvZD2wwmB"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "RLzLNZ1ROgVSJ4tqAT--Q"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "wwhnXxusKZ3h6-m2GYZGA"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "uapiuwlY3R5d2GnnrK7tt"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "iF9Ks6mfI_nXxELm_m8Z2"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "KniKMFKanAPgVrrMR5YOp"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "y4G7mHSvE1anC6uTwj0td"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "D2WKxTyAVtzCl6wJh1FSr"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "-GuA0wTaFMHiLyczSgGuJ"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "Qfq4ED-3pYmkClrn0GSM9"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "AuC18WyFTsA1pvY0ATQYZ"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "_OTF2IJ8f9uws_05NWWb1"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "nyLep9HsyER5fiNPayblu"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "o3Ng_QvR1u_kmWXXmeBcR"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "oeWPw8Q2sFk1Jgy_rlSGG"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "4XzlucJeA3TXIfmpOVqXC"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                "before mcp server ",
+                "[object Object]"
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699224,
+                    "id": "zE_E4JjNRJMIRNgMztucE"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                "mcpServer added",
+                "server-worker",
+                "https://server-worker.raranj.workers.dev"
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                "connection id: ",
+                "8eXJMM44"
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                "TOOLS: ",
+                []
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                "normTOOLS: ",
+                []
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                "before env.AI.run  "
+            ],
+            "level": "log",
+            "timestamp": 1761179699224
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "5dYaXT6mEXEQKTRQa1ocq"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "CxTKppSnuuqLQcRpbCJ4O"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "77QBinPljgvsLjLijc4-E"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "V38HxPasocBtQAH2adUZ-"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "jFAWsayuuy53Aim1s9Ngj"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "nptF1mzgweI0G7rqENppI"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "QEA7d6LjZC8P57MsUN7fm"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "4jfDokpcOvi3cDsvI4qF_"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "OmhNWWiKLlRqzCp8toSmy"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "KCMFwA6UmR2rVWzEen65L"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/mcp",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/mcp",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "iJpbe-7w-_RDvKHaRhQY1"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/mcp",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/mcp",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "R39WfacR4i_iB2n5svah3"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "VFBoUf74JeVY34ohOnsT-"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "JPtt5Scxpm2Ni_Aka-rRZ"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/mcp",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/mcp",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "vmZ1brlgDbBnHexeHLNhD"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "pFDgfr3yudCGq8hoace3z"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/mcp",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/mcp",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "kmitjLchLk52HcRLsfso5"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "-k9L9R79q_VvnBuVIwVMW"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "sMr3LChrN_Na9GymUKdlL"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "7lpHavcdboSqinWkZ5LOl"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "ABluMpdUhS2d9gfQ2gvwd"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "okqdD5DiCn5Hpr8Z8uDdE"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "BhdfYnY8WtXOpdbCSwBMm"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "zLnBLg-qJC3kz_9jYVNMt"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "6Ci2nt2iu0POGcTWefp1y"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "hq0_SRa9-OLrpwsssILzL"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "-R5FZlk14iNn92ryc5gKn"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "yczEdq3I4Uk-yo_3ConAG"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "Ymn0PbpmEY8P5S8G5kr3s"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699375,
+                    "id": "SofMHqE6dKZtArVX6QleJ"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699375
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699380,
+                    "id": "k5yez8IyguJflBkGdskoY"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699380
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699380,
+                    "id": "hQrU0kYIWGXn0vA5o9Mp-"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699380
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699380,
+                    "id": "5wMHT2Ogub0sdSdeCNFaE"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699380
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699380,
+                    "id": "bPNPAXyZ5bLnoxlIJrf7P"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699380
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699380,
+                    "id": "_tk9AKmWCqTt2EdqALpDg"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699380
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699383,
+                    "id": "_ukgq4u6uzzpx2DgsCzyQ"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699383
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699386,
+                    "id": "Ra5Uv8H859BWnFn262rQ_"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699386
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699390,
+                    "id": "rsQeS8FW7bt9whxmtph-X"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699390
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699392,
+                    "id": "aIhin8FwydxGk5FtryUf6"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699392
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699392,
+                    "id": "KYXzwAGTASCdcfl2XzuW7"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699392
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699392,
+                    "id": "V_8mXIgRdnul2X46Fc1vu"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699392
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699392,
+                    "id": "jaUbHzh-WZGy55OO0Xrsi"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699392
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699392,
+                    "id": "DKQqvi6VNOZlLdBHNMZNE"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699392
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699396,
+                    "id": "ptB4R972KHB60px80hZ61"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699396
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699405,
+                    "id": "-PbYPgHJby2mIw4z6F93K"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699405
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699411,
+                    "id": "XigtkNCu_XBjujL1sVeky"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699411
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699411,
+                    "id": "MwuzgZ6Q4ARwB7-rhz1cD"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699411
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699415,
+                    "id": "ZvV5EpZVcnSSKgkc0o2If"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699415
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699416,
+                    "id": "FRvnWc2coOy0LwYRv37tv"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699416
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connection initialization failed for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "auto",
+                        "state": "connecting",
+                        "error": "Too many subrequests."
+                    },
+                    "timestamp": 1761179699416,
+                    "id": "aeaI0rJVU9vhPRTBkZgBP"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179699416
+        }
+    ],
+    "eventTimestamp": 1761179699022,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-length": "26",
+                "content-type": "application/json"
+            }
+        }
+    }
+}
+{
+    "wallTime": 6,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "3c1fdc41fb138e7f3bc538ef9148223109128dd730b206895234664b65ebba06",
+    "scriptVersion": {
+        "id": "7b809758-9fa4-480e-bb21-2a43cf4da9bb"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761179699439,
+    "event": {
+        "rpcMethod": "setName"
+    }
+}
+{
+    "wallTime": 5,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "3c1fdc41fb138e7f3bc538ef9148223109128dd730b206895234664b65ebba06",
+    "scriptVersion": {
+        "id": "7b809758-9fa4-480e-bb21-2a43cf4da9bb"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761179708082,
+    "event": {
+        "rpcMethod": "setName"
+    }
+}
+{
+    "wallTime": 617,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "3c1fdc41fb138e7f3bc538ef9148223109128dd730b206895234664b65ebba06",
+    "scriptVersion": {
+        "id": "7b809758-9fa4-480e-bb21-2a43cf4da9bb"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "before mcp server ",
+                "[object Object]"
+            ],
+            "level": "log",
+            "timestamp": 1761179708000
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connected successfully using streamable-http transport for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "streamable-http",
+                        "state": "connecting"
+                    },
+                    "timestamp": 1761179708033,
+                    "id": "N3VwwcpkqbHRW8ihyUOe9"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179708033
+        },
+        {
+            "message": [
+                "mcpServer added",
+                "server-worker",
+                "https://server-worker.raranj.workers.dev"
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        },
+        {
+            "message": [
+                "connection id: ",
+                "fc2nOfI5"
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        },
+        {
+            "message": [
+                "TOOLS: ",
+                [
+                    {
+                        "name": "echo",
+                        "description": "Echo input text",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "text"
+                            ],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "apps_on_device",
+                        "description": "List apps on a device",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "device_id": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "device_id"
+                            ],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "msoffice_versions",
+                        "description": "Microsoft Office versions",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "slack_vs_teams",
+                        "description": "Slack vs Teams",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "outdated_java_devices",
+                        "description": "Devices with outdated Java",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "browser_updates",
+                        "description": "Devices needing browser updates",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "unallowed_apps",
+                        "description": "Devices with unallowed apps",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "unencrypted_devices",
+                        "description": "Devices without encryption",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "no_autolock_devices",
+                        "description": "Devices without auto-lock",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "os_distribution",
+                        "description": "OS distribution",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "devices_needing_upgrade",
+                        "description": "Count devices needing IS upgrade",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        },
+        {
+            "message": [
+                "normTOOLS: ",
+                [
+                    {
+                        "name": "echo",
+                        "description": "Echo input text",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "text"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "apps_on_device",
+                        "description": "List apps on a device",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {
+                                "device_id": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "device_id"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "msoffice_versions",
+                        "description": "Microsoft Office versions",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "slack_vs_teams",
+                        "description": "Slack vs Teams",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "outdated_java_devices",
+                        "description": "Devices with outdated Java",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "browser_updates",
+                        "description": "Devices needing browser updates",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "unallowed_apps",
+                        "description": "Devices with unallowed apps",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "unencrypted_devices",
+                        "description": "Devices without encryption",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "no_autolock_devices",
+                        "description": "Devices without auto-lock",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "os_distribution",
+                        "description": "OS distribution",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "devices_needing_upgrade",
+                        "description": "Count devices needing IS upgrade",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        },
+        {
+            "message": [
+                "🧰tool name: echo: Echo input text"
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        },
+        {
+            "message": [
+                "🧰tool name: apps_on_device: List apps on a device"
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        },
+        {
+            "message": [
+                "🧰tool name: msoffice_versions: Microsoft Office versions"
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        },
+        {
+            "message": [
+                "🧰tool name: slack_vs_teams: Slack vs Teams"
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        },
+        {
+            "message": [
+                "🧰tool name: outdated_java_devices: Devices with outdated Java"
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        },
+        {
+            "message": [
+                "🧰tool name: browser_updates: Devices needing browser updates"
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        },
+        {
+            "message": [
+                "🧰tool name: unallowed_apps: Devices with unallowed apps"
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        },
+        {
+            "message": [
+                "🧰tool name: unencrypted_devices: Devices without encryption"
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        },
+        {
+            "message": [
+                "🧰tool name: no_autolock_devices: Devices without auto-lock"
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        },
+        {
+            "message": [
+                "🧰tool name: os_distribution: OS distribution"
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        },
+        {
+            "message": [
+                "🧰tool name: devices_needing_upgrade: Count devices needing IS upgrade"
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        },
+        {
+            "message": [
+                "before env.AI.run  "
+            ],
+            "level": "log",
+            "timestamp": 1761179708045
+        }
+    ],
+    "eventTimestamp": 1761179708000,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-length": "26",
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 631,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "7b809758-9fa4-480e-bb21-2a43cf4da9bb"
+    },
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761179707990,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1177,
+    "cpuTime": 5,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "3c1fdc41fb138e7f3bc538ef9148223109128dd730b206895234664b65ebba06",
+    "scriptVersion": {
+        "id": "7b809758-9fa4-480e-bb21-2a43cf4da9bb"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "before mcp server ",
+                "[object Object]"
+            ],
+            "level": "log",
+            "timestamp": 1761179708318
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connected successfully using streamable-http transport for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "streamable-http",
+                        "state": "connecting"
+                    },
+                    "timestamp": 1761179708342,
+                    "id": "qokMEP5zClcR7TtfBs6Kf"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761179708342
+        },
+        {
+            "message": [
+                "mcpServer added",
+                "server-worker",
+                "https://server-worker.raranj.workers.dev"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "connection id: ",
+                "5IYDko-D"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "TOOLS: ",
+                [
+                    {
+                        "name": "echo",
+                        "description": "Echo input text",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "text"
+                            ],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "apps_on_device",
+                        "description": "List apps on a device",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "device_id": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "device_id"
+                            ],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "msoffice_versions",
+                        "description": "Microsoft Office versions",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "slack_vs_teams",
+                        "description": "Slack vs Teams",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "outdated_java_devices",
+                        "description": "Devices with outdated Java",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "browser_updates",
+                        "description": "Devices needing browser updates",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "unallowed_apps",
+                        "description": "Devices with unallowed apps",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "unencrypted_devices",
+                        "description": "Devices without encryption",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "no_autolock_devices",
+                        "description": "Devices without auto-lock",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "os_distribution",
+                        "description": "OS distribution",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "devices_needing_upgrade",
+                        "description": "Count devices needing IS upgrade",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "fc2nOfI5"
+                    },
+                    {
+                        "name": "echo",
+                        "description": "Echo input text",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "text"
+                            ],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "5IYDko-D"
+                    },
+                    {
+                        "name": "apps_on_device",
+                        "description": "List apps on a device",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "device_id": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "device_id"
+                            ],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "5IYDko-D"
+                    },
+                    {
+                        "name": "msoffice_versions",
+                        "description": "Microsoft Office versions",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "5IYDko-D"
+                    },
+                    {
+                        "name": "slack_vs_teams",
+                        "description": "Slack vs Teams",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "5IYDko-D"
+                    },
+                    {
+                        "name": "outdated_java_devices",
+                        "description": "Devices with outdated Java",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "5IYDko-D"
+                    },
+                    {
+                        "name": "browser_updates",
+                        "description": "Devices needing browser updates",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "5IYDko-D"
+                    },
+                    {
+                        "name": "unallowed_apps",
+                        "description": "Devices with unallowed apps",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "5IYDko-D"
+                    },
+                    {
+                        "name": "unencrypted_devices",
+                        "description": "Devices without encryption",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "5IYDko-D"
+                    },
+                    {
+                        "name": "no_autolock_devices",
+                        "description": "Devices without auto-lock",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "5IYDko-D"
+                    },
+                    {
+                        "name": "os_distribution",
+                        "description": "OS distribution",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "5IYDko-D"
+                    },
+                    {
+                        "name": "devices_needing_upgrade",
+                        "description": "Count devices needing IS upgrade",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "5IYDko-D"
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "normTOOLS: ",
+                [
+                    {
+                        "name": "echo",
+                        "description": "Echo input text",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "text"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "apps_on_device",
+                        "description": "List apps on a device",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {
+                                "device_id": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "device_id"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "msoffice_versions",
+                        "description": "Microsoft Office versions",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "slack_vs_teams",
+                        "description": "Slack vs Teams",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "outdated_java_devices",
+                        "description": "Devices with outdated Java",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "browser_updates",
+                        "description": "Devices needing browser updates",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "unallowed_apps",
+                        "description": "Devices with unallowed apps",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "unencrypted_devices",
+                        "description": "Devices without encryption",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "no_autolock_devices",
+                        "description": "Devices without auto-lock",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "os_distribution",
+                        "description": "OS distribution",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "devices_needing_upgrade",
+                        "description": "Count devices needing IS upgrade",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "echo",
+                        "description": "Echo input text",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "text"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "apps_on_device",
+                        "description": "List apps on a device",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {
+                                "device_id": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "device_id"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "msoffice_versions",
+                        "description": "Microsoft Office versions",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "slack_vs_teams",
+                        "description": "Slack vs Teams",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "outdated_java_devices",
+                        "description": "Devices with outdated Java",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "browser_updates",
+                        "description": "Devices needing browser updates",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "unallowed_apps",
+                        "description": "Devices with unallowed apps",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "unencrypted_devices",
+                        "description": "Devices without encryption",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "no_autolock_devices",
+                        "description": "Devices without auto-lock",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "os_distribution",
+                        "description": "OS distribution",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "devices_needing_upgrade",
+                        "description": "Count devices needing IS upgrade",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: echo: Echo input text"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: apps_on_device: List apps on a device"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: msoffice_versions: Microsoft Office versions"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: slack_vs_teams: Slack vs Teams"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: outdated_java_devices: Devices with outdated Java"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: browser_updates: Devices needing browser updates"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: unallowed_apps: Devices with unallowed apps"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: unencrypted_devices: Devices without encryption"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: no_autolock_devices: Devices without auto-lock"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: os_distribution: OS distribution"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: devices_needing_upgrade: Count devices needing IS upgrade"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: echo: Echo input text"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: apps_on_device: List apps on a device"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: msoffice_versions: Microsoft Office versions"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: slack_vs_teams: Slack vs Teams"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: outdated_java_devices: Devices with outdated Java"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: browser_updates: Devices needing browser updates"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: unallowed_apps: Devices with unallowed apps"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: unencrypted_devices: Devices without encryption"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: no_autolock_devices: Devices without auto-lock"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: os_distribution: OS distribution"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "🧰tool name: devices_needing_upgrade: Count devices needing IS upgrade"
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        },
+        {
+            "message": [
+                "before env.AI.run  "
+            ],
+            "level": "log",
+            "timestamp": 1761179708357
+        }
+    ],
+    "eventTimestamp": 1761179708318,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-length": "26",
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1194,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "7b809758-9fa4-480e-bb21-2a43cf4da9bb"
+    },
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761179708323,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
