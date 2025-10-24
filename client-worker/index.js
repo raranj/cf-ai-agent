@@ -1,5 +1,4 @@
 import { Agent } from "agents";
-
 import { getCurrentAgent } from "agents";
 export class MyAgent extends Agent {
   constructor(state, env) {

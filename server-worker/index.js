@@ -1,7 +1,5 @@
 export default {
   async fetch(request, env, ctx) {
-    // This is the entry point for the worker.
-    // We are calling your existing MCP logic and passing along the context.
     return await handleRequest({ request, env, waitUntil: ctx.waitUntil });
   }
 };
@@ -9,13 +7,11 @@ export default {
 async function handleRequest({ request, env, waitUntil }) {
   const url = new URL(request.url);
 
-  // --- SSE endpoint ---
   if (request.method === "GET" && url.pathname === "/mcp") {
     const { readable, writable } = new TransformStream();
     const writer = writable.getWriter();
     const encoder = new TextEncoder();
 
-    // Keep-alive ping every 30s
     const keepAlive = setInterval(() => writer.write(encoder.encode(":\n\n")), 30000);
 
     waitUntil((async () => {
@@ -38,7 +34,6 @@ async function handleRequest({ request, env, waitUntil }) {
     });
   }
 
-  // --- JSON-RPC POST handler ---
   if (request.method === "POST" && (url.pathname === "/mcp" || url.pathname === "/")) {
     let body;
     try {
@@ -55,7 +50,6 @@ async function handleRequest({ request, env, waitUntil }) {
     console.log('Method: ' + method);
     console.log('Params: ' + params);
 
-    // ---- Initialize ----
     if (method === "initialize") {
       return new Response(
         JSON.stringify({
@@ -76,7 +70,6 @@ async function handleRequest({ request, env, waitUntil }) {
       return new Response(null, { status: 204 });
     }
 
-    // ---- List tools ----
     if (method === "tools/list") {
       return new Response(
         JSON.stringify({
@@ -103,11 +96,9 @@ async function handleRequest({ request, env, waitUntil }) {
       );
     }
 
-    // ---- Call tools ----
     if (method === "tools/call") {
       const { name, arguments: args } = params || {};
 
-      // Helper for database queries: returns array of row objects
       const runQuery = async (sql, binds = []) => {
         const r = await env.devices_db.prepare(sql).bind(...binds).all();
         return r?.results ?? [];
@@ -128,7 +119,6 @@ async function handleRequest({ request, env, waitUntil }) {
         );
       }
 
-      // ---- Echo ----
       if (name === "echo") {
         return new Response(
           JSON.stringify({
@@ -141,7 +131,6 @@ async function handleRequest({ request, env, waitUntil }) {
       }
 
       console.log('ToolName inside tools/call: ' + name);
-      // ---- Applications on device ----
       if (name === "apps_on_device") {
         console.log("apps_on_device called with device_id:", args?.device_id);
 
@@ -165,7 +154,6 @@ async function handleRequest({ request, env, waitUntil }) {
         if (rows.results.length === 0) {
           outputText = `No applications found for device ${args.device_id}.`;
         } else {
-          // Format the results as a Markdown table
           let table = "| Application        | Version    | Vendor              | Needs Update |\n";
           table +=    "|--------------------|------------|---------------------|--------------|\n";
           rows.results.forEach(app => {
@@ -174,7 +162,6 @@ async function handleRequest({ request, env, waitUntil }) {
           outputText = table;
         }
 
-        // Return the formatted text inside the standard "content" block
         return new Response(
           JSON.stringify({
             jsonrpc: "2.0",
@@ -185,7 +172,6 @@ async function handleRequest({ request, env, waitUntil }) {
         );
       }
 
-      // ---- Microsoft Office versions ----
       if (name === "msoffice_versions") {
         const rows = await env.devices_db.prepare(`
           SELECT da.device_id, da.app_version, da.last_update
@@ -216,7 +202,6 @@ async function handleRequest({ request, env, waitUntil }) {
         );
       }
 
-      // ---- Slack vs Teams ----
       if (name === "slack_vs_teams") {
         const rows = await env.devices_db.prepare(`
           SELECT a.name AS application,
@@ -250,7 +235,6 @@ async function handleRequest({ request, env, waitUntil }) {
         );
       }
 
-      // ---- Outdated Java devices ----
       if (name === "outdated_java_devices") {
         const rows = await env.devices_db.prepare(`
           SELECT d.device_id, da.app_version
@@ -271,7 +255,6 @@ async function handleRequest({ request, env, waitUntil }) {
         }), { headers: { "Content-Type": "application/json" } });
       }
 
-      // ---- Browser updates ----
       if (name === "browser_updates") {
         const rows = await env.devices_db.prepare(`
           SELECT DISTINCT d.device_id, a.name AS browser_name, da.app_version
@@ -292,7 +275,6 @@ async function handleRequest({ request, env, waitUntil }) {
         }), { headers: { "Content-Type": "application/json" } });
       }
 
-      // ---- Unallowed applications ----
       if (name === "unallowed_apps") {
         const rows = await env.devices_db.prepare(`
           SELECT DISTINCT d.device_id, a.name
@@ -313,7 +295,6 @@ async function handleRequest({ request, env, waitUntil }) {
         }), { headers: { "Content-Type": "application/json" } });
       }
 
-      // ---- Unencrypted devices ----
       if (name === "unencrypted_devices") {
         const rows = await env.devices_db.prepare(`
           SELECT device_id, hostname, username, department
@@ -332,7 +313,6 @@ async function handleRequest({ request, env, waitUntil }) {
         }), { headers: { "Content-Type": "application/json" } });
       }
 
-      // ---- No auto-lock devices ----
       if (name === "no_autolock_devices") {
         const rows = await env.devices_db.prepare(`
           SELECT device_id, hostname, username, department
@@ -351,7 +331,6 @@ async function handleRequest({ request, env, waitUntil }) {
         }), { headers: { "Content-Type": "application/json" } });
       }
 
-      // ---- OS distribution ----
       if (name === "os_distribution") {
         const total = (await env.devices_db.prepare(`SELECT COUNT(*) AS count FROM devices;`).all()).results[0].count;
         const rows = await env.devices_db.prepare(`
@@ -369,7 +348,6 @@ async function handleRequest({ request, env, waitUntil }) {
         }), { headers: { "Content-Type": "application/json" } });
       }
 
-      // ---- Devices needing IS upgrade ----
       if (name === "devices_needing_upgrade") {
         const count = (await env.devices_db.prepare(`
           SELECT COUNT(*) AS count FROM devices WHERE needs_is_upgrade = 1;
@@ -384,7 +362,6 @@ async function handleRequest({ request, env, waitUntil }) {
       }
     }
 
-    // Method not found
     return new Response(
       JSON.stringify({ jsonrpc: "2.0", id, error: { code: -32601, message: "Method not found" } }),
       { headers: { "Content-Type": "application/json" } }
