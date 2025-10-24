@@ -2,7 +2,7 @@
 
 A Model Context Protocol (MCP) implementation using Cloudflare Workers AI, demonstrating agent-based architecture with tool calling capabilities for device management queries.
 
-## 🎥 Demo
+## Demo
 
 **Live Demo:** [https://cf-ai-agent.pages.dev](https://cf-ai-agent.pages.dev)
 
@@ -10,16 +10,16 @@ A Model Context Protocol (MCP) implementation using Cloudflare Workers AI, demon
 
 ![Application Screenshot](./docs/screenshot.png)
 
-## 📋 Overview
+## Overview
 
 This project implements a complete MCP (Model Context Protocol) server-client architecture using Cloudflare's edge infrastructure. It features:
 
 - **MCP Server Worker**: Exposes device management tools via MCP protocol
 - **MCP Client Worker**: Durable Object-based agent that connects to the MCP server and processes queries using Cloudflare AI
-- **Frontend**: Simple web interface for asking questions about device inventory
+- **Cloudflare Pages Frontend**: Simple web interface for asking questions about device inventory
 - **D1 Database**: Cloudflare D1 database storing device and application information
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐
@@ -58,7 +58,7 @@ This project implements a complete MCP (Model Context Protocol) server-client ar
 └───────────────────────────────┘
 ```
 
-## 🔧 Available MCP Tools
+## Available MCP Tools
 
 The MCP server provides these tools for device management:
 
@@ -75,7 +75,7 @@ The MCP server provides these tools for device management:
 11. **os_distribution** - Show OS distribution across devices
 12. **devices_needing_upgrade** - Count devices needing IS upgrades
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 
@@ -153,41 +153,7 @@ Deploy to Cloudflare Pages:
 wrangler pages deploy . --project-name=cf-ai-agent
 ```
 
-## 💻 Local Development
-
-### Running Server Worker Locally
-
-```bash
-cd server-worker
-wrangler dev --remote  # Use --remote to access D1 database
-```
-
-### Running Client Worker Locally
-
-In a separate terminal:
-
-```bash
-cd client-worker
-wrangler dev --port 8788
-```
-
-### Running Pages Locally
-
-Update `wrangler.toml` to use local client worker:
-
-```toml
-[[services]]
-binding = "CLIENT_WORKER"
-service = "client-worker"
-```
-
-Then run:
-
-```bash
-wrangler pages dev . --live-reload
-```
-
-## 📝 Usage Examples
+## Usage Examples
 
 Once deployed, you can ask natural language questions like:
 
@@ -281,21 +247,6 @@ The database includes:
 - Ensure server worker is returning tools in the correct MCP format
 - Check that tool names match between server and AI responses
 
-## 📚 Additional Resources
+## Author
 
-- [Cloudflare Workers Documentation](https://developers.cloudflare.com/workers/)
-- [Cloudflare D1 Documentation](https://developers.cloudflare.com/d1/)
-- [Model Context Protocol Specification](https://modelcontextprotocol.io/)
-- [Agents SDK Documentation](https://www.npmjs.com/package/agents)
-
-## 📄 License
-
-MIT
-
-## 👤 Author
-
-[Your Name]
-
----
-
-**Note**: Remember to update the deployed URLs, screenshots, and video walkthrough links after deployment!
+[Ranjana Rajagopalan]
