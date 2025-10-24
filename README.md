@@ -170,7 +170,7 @@ The agent will:
 3. Call the appropriate MCP tool(s)
 4. Return formatted results
 
-## 📊 Sample Data
+## Sample Data
 
 The database includes:
 
@@ -178,7 +178,7 @@ The database includes:
 - **10 applications** (mix of allowed/unallowed software)
 - Various compliance scenarios (encryption, auto-lock, outdated software)
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Cloudflare Workers** - Serverless compute platform
 - **Cloudflare Durable Objects** - Stateful agent management
@@ -188,7 +188,7 @@ The database includes:
 - **MCP Protocol** - Model Context Protocol for tool calling
 - **Agents SDK** - Cloudflare's agent framework
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -201,15 +201,15 @@ The database includes:
 │   └── wrangler.toml
 ├── functions/
 │   └── api/
-│       └── ask.js        # Pages function endpoint
-├── index.html            # Frontend interface
-├── schema.sql            # Database schema and seed data
+│       └── ask.js        # Pages Function endpoint
+├── index.html            # Pages interface
+├── schema.sql            # Database schema and data
 ├── wrangler.toml         # Pages configuration
 ├── package.json
 └── README.md
 ```
 
-## 🔍 How It Works
+## How It Works
 
 1. **User submits a question** through the web interface
 2. **Pages Function** (`/api/ask`) forwards the request to the Client Worker
@@ -222,7 +222,7 @@ The database includes:
 6. **Server Worker** executes the tool (queries D1 database)
 7. **Results** are returned through the chain back to the user
 
-## 🎯 Key Features
+## Key Features
 
 - **Edge-native architecture** - Runs entirely on Cloudflare's edge network
 - **Stateful agents** - Durable Objects maintain MCP connections
@@ -231,7 +231,7 @@ The database includes:
 - **Real-time data** - Queries live D1 database
 - **Scalable** - Serverless architecture scales automatically
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Agent doesn't respond
 - Check that both workers are deployed and accessible
@@ -246,7 +246,3 @@ The database includes:
 ### Tool not found errors
 - Ensure server worker is returning tools in the correct MCP format
 - Check that tool names match between server and AI responses
-
-## Author
-
-[Ranjana Rajagopalan]
