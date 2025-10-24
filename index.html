@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,13 +12,21 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
-        background: #fafafa;
+        background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
         margin: 0;
       }
       #container {
         width: 100%;
         max-width: 700px;
         text-align: center;
+        background: white;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      }
+      h1 {
+        color: #f6821f;
+        margin-bottom: 1.5rem;
       }
       input,
       button,
@@ -32,29 +40,47 @@
       select {
         width: 70%;
         margin-bottom: 1rem;
+        border: 2px solid #e0e0e0;
+        transition: border-color 0.3s;
+      }
+      input:focus {
+        outline: none;
+        border-color: #f6821f;
       }
       button {
-        background: #0078ff;
+        background: linear-gradient(135deg, #f6821f 0%, #ff6b35 100%);
         color: white;
         border: none;
         cursor: pointer;
+        font-weight: 600;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        box-shadow: 0 4px 12px rgba(246, 130, 31, 0.3);
       }
       button:hover {
-        background: #005fe0;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(246, 130, 31, 0.4);
+      }
+      button:active {
+        transform: translateY(0);
       }
       #answer {
         margin-top: 2rem;
         padding: 1rem;
-        background: #fff;
+        background: #fafafa;
         border-radius: 8px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         min-height: 3rem;
+        color: #2c3e50;
+        line-height: 1.6;
+        border-left: 4px solid #f6821f;
       }
     </style>
   </head>
   <body>
     <div id="container">
-      <h1>🤖 Ask the MCP Agent</h1>
+      <h1>Ask the Agent</h1>
       <input id="question" placeholder="Ask a question..." />
       <button id="askBtn">Ask</button>
 
@@ -73,7 +99,7 @@
           return;
         }
 
-        answerDiv.textContent = "⏳ Thinking...";
+        answerDiv.textContent = "Thinking...";
 
         const res = await fetch("/api/ask", {
           method: "POST",
@@ -81,11 +107,8 @@
           body: JSON.stringify({ prompt }),
         });
 
-        // const rawBody = await res.text();
-        // console.log("📦 Body :", rawBody);
-
         const data = await res.json();
-        
+
         answerDiv.textContent = data.msg || "No response.";
       });
     </script>
