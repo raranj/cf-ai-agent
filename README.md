@@ -8,7 +8,7 @@ A Model Context Protocol (MCP) implementation using Cloudflare Workers AI, demon
 
 **Video Walkthrough:** [Link to video demonstration]
 
-![Application Screenshot](./docs/screenshot.png)
+![Application Screenshot](./example.png)
 
 ## Overview
 
