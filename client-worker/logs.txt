@@ -1,53 +1,476 @@
 {
-    "wallTime": 562,
+    "wallTime": 307,
     "cpuTime": 0,
     "truncated": false,
-    "executionModel": "stateless",
-    "outcome": "exception",
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "f7cac9a27254b52bee500010a261960e72a4c131178174b157e13acd1a29532e",
     "scriptVersion": {
-        "id": "3d9e7a88-9d93-4776-aaca-e70e96bc6cd9"
+        "id": "23fae9d1-23bd-4bfc-86e4-c9217cde53d8"
     },
+    "entrypoint": "MyAgent",
     "scriptName": "client-worker",
     "diagnosticsChannelEvents": [],
-    "exceptions": [
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761324209320,
+    "event": {
+        "rpcMethod": ""
+    }
+}
+{
+    "wallTime": 8136,
+    "cpuTime": 105,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "f7cac9a27254b52bee500010a261960e72a4c131178174b157e13acd1a29532e",
+    "scriptVersion": {
+        "id": "23fae9d1-23bd-4bfc-86e4-c9217cde53d8"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
         {
-            "name": "Error",
-            "message": "Too many subrequests.",
-            "timestamp": 1761199011590
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connected successfully using streamable-http transport for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "streamable-http",
+                        "state": "connecting"
+                    },
+                    "timestamp": 1761324209868,
+                    "id": "xIM9Af_VRRXbf8JBnQp_j"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761324209868
+        },
+        {
+            "message": [
+                "connection id: ",
+                "-sK-IH_P"
+            ],
+            "level": "log",
+            "timestamp": 1761324209903
+        },
+        {
+            "message": [
+                "TOOLS: ",
+                [
+                    {
+                        "name": "echo",
+                        "description": "Echo input text",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "text"
+                            ],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "-sK-IH_P"
+                    },
+                    {
+                        "name": "apps_on_device",
+                        "description": "List apps on a device",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "device_id": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "device_id"
+                            ],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "-sK-IH_P"
+                    },
+                    {
+                        "name": "msoffice_versions",
+                        "description": "Microsoft Office versions",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "-sK-IH_P"
+                    },
+                    {
+                        "name": "slack_vs_teams",
+                        "description": "Slack vs Teams",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "-sK-IH_P"
+                    },
+                    {
+                        "name": "outdated_java_devices",
+                        "description": "Devices with outdated Java",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "-sK-IH_P"
+                    },
+                    {
+                        "name": "browser_updates",
+                        "description": "Devices needing browser updates",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "-sK-IH_P"
+                    },
+                    {
+                        "name": "unallowed_apps",
+                        "description": "Devices with unallowed apps",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "-sK-IH_P"
+                    },
+                    {
+                        "name": "unencrypted_devices",
+                        "description": "Devices without encryption",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "-sK-IH_P"
+                    },
+                    {
+                        "name": "no_autolock_devices",
+                        "description": "Devices without auto-lock",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "-sK-IH_P"
+                    },
+                    {
+                        "name": "os_distribution",
+                        "description": "OS distribution",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "-sK-IH_P"
+                    },
+                    {
+                        "name": "devices_needing_upgrade",
+                        "description": "Count devices needing IS upgrade",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "-sK-IH_P"
+                    },
+                    {
+                        "name": "add_numbers",
+                        "description": "Add two numbers and return the sum.",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "a": {
+                                    "type": "number",
+                                    "description": "The first number"
+                                },
+                                "b": {
+                                    "type": "number",
+                                    "description": "The second number"
+                                }
+                            },
+                            "required": [
+                                "a",
+                                "b"
+                            ],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "-sK-IH_P"
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761324209903
+        },
+        {
+            "message": [
+                "normTOOLS: ",
+                [
+                    {
+                        "name": "echo",
+                        "description": "Echo input text",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "text"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "apps_on_device",
+                        "description": "List apps on a device",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {
+                                "device_id": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "device_id"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "msoffice_versions",
+                        "description": "Microsoft Office versions",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "slack_vs_teams",
+                        "description": "Slack vs Teams",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "outdated_java_devices",
+                        "description": "Devices with outdated Java",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "browser_updates",
+                        "description": "Devices needing browser updates",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "unallowed_apps",
+                        "description": "Devices with unallowed apps",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "unencrypted_devices",
+                        "description": "Devices without encryption",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "no_autolock_devices",
+                        "description": "Devices without auto-lock",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "os_distribution",
+                        "description": "OS distribution",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "devices_needing_upgrade",
+                        "description": "Count devices needing IS upgrade",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "add_numbers",
+                        "description": "Add two numbers and return the sum.",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {
+                                "a": {
+                                    "type": "number",
+                                    "description": "The first number"
+                                },
+                                "b": {
+                                    "type": "number",
+                                    "description": "The second number"
+                                }
+                            },
+                            "required": [
+                                "a",
+                                "b"
+                            ]
+                        }
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761324209903
+        },
+        {
+            "message": [
+                "before env.AI.run  "
+            ],
+            "level": "log",
+            "timestamp": 1761324209903
+        },
+        {
+            "message": [
+                "result: ",
+                {
+                    "response": null,
+                    "tool_calls": [
+                        {
+                            "name": "echo",
+                            "arguments": {
+                                "text": "I have the following tools: echo, apps_on_device, msoffice_versions, slack_vs_teams, outdated_java_devices, browser_updates, unallowed_apps, unencrypted_devices, no_autolock_devices, os_distribution, devices_needing_upgrade, add_numbers"
+                            }
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 491,
+                        "completion_tokens": 68,
+                        "total_tokens": 559
+                    }
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761324212606
+        },
+        {
+            "message": [
+                "Tool Calls: ",
+                [
+                    {
+                        "name": "echo",
+                        "arguments": {
+                            "text": "I have the following tools: echo, apps_on_device, msoffice_versions, slack_vs_teams, outdated_java_devices, browser_updates, unallowed_apps, unencrypted_devices, no_autolock_devices, os_distribution, devices_needing_upgrade, add_numbers"
+                        }
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761324212606
+        },
+        {
+            "message": [
+                "Calling tool: echo with",
+                {
+                    "text": "I have the following tools: echo, apps_on_device, msoffice_versions, slack_vs_teams, outdated_java_devices, browser_updates, unallowed_apps, unencrypted_devices, no_autolock_devices, os_distribution, devices_needing_upgrade, add_numbers"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761324212606
+        },
+        {
+            "message": [
+                "toolResult: ",
+                {
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "I have the following tools: echo, apps_on_device, msoffice_versions, slack_vs_teams, outdated_java_devices, browser_updates, unallowed_apps, unencrypted_devices, no_autolock_devices, os_distribution, devices_needing_upgrade, add_numbers"
+                        }
+                    ]
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761324212615
+        },
+        {
+            "message": [
+                "Final response: I have a wide range of tools at my disposal. Here are some of the tools I can use:\n\n1. **Echo**: A simple tool that repeats back what you say, useful for testing or demonstrating a point.\n2. **Apps on Device**: A tool that provides information about the apps installed on a device.\n3. **MS Office Versions**: A tool that checks the versions of Microsoft Office installed on a device.\n4. **Slack vs Teams**: A tool that compares the features and functionality of Slack and Microsoft Teams.\n5. **Outdated Java Devices**: A tool that identifies devices with outdated Java versions.\n6. **Browser Updates**: A tool that checks for updates to web browsers.\n7. **Unallowed Apps**: A tool that identifies apps that are not allowed on a device.\n8. **Unencrypted Devices**: A tool that identifies devices that do not have encryption enabled.\n9. **No Auto-Lock Devices**: A tool that identifies devices that do not have auto-lock enabled.\n10. **OS Distribution**: A tool that provides information about the distribution of operating systems on devices.\n11. **Devices Needing Upgrade**: A tool that identifies devices that need to be upgraded.\n12. **Add Numbers**: A tool that can perform basic arithmetic operations,"
+            ],
+            "level": "log",
+            "timestamp": 1761324217626
         }
     ],
-    "logs": [],
-    "eventTimestamp": 1761199010953,
+    "eventTimestamp": 1761324209492,
     "event": {
         "request": {
             "url": "https://agent/ask",
             "method": "POST",
             "headers": {
+                "content-length": "36",
                 "content-type": "application/json"
             }
+        },
+        "response": {
+            "status": 200
         }
     }
 }
 {
-    "wallTime": 234,
+    "wallTime": 8397,
     "cpuTime": 0,
     "truncated": false,
     "executionModel": "stateless",
-    "outcome": "exception",
+    "outcome": "ok",
     "scriptVersion": {
-        "id": "3d9e7a88-9d93-4776-aaca-e70e96bc6cd9"
+        "id": "23fae9d1-23bd-4bfc-86e4-c9217cde53d8"
     },
     "scriptName": "client-worker",
     "diagnosticsChannelEvents": [],
-    "exceptions": [
-        {
-            "name": "Error",
-            "message": "Too many subrequests.",
-            "timestamp": 1761199025440
-        }
-    ],
+    "exceptions": [],
     "logs": [],
-    "eventTimestamp": 1761199025207,
+    "eventTimestamp": 1761324209105,
     "event": {
         "request": {
             "url": "https://agent/ask",
@@ -55,59 +478,505 @@
             "headers": {
                 "content-type": "application/json"
             }
+        },
+        "response": {
+            "status": 200
         }
     }
 }
 {
-    "wallTime": 314,
+    "wallTime": 18,
     "cpuTime": 0,
     "truncated": false,
-    "executionModel": "stateless",
-    "outcome": "exception",
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "f7cac9a27254b52bee500010a261960e72a4c131178174b157e13acd1a29532e",
     "scriptVersion": {
-        "id": "3d9e7a88-9d93-4776-aaca-e70e96bc6cd9"
+        "id": "23fae9d1-23bd-4bfc-86e4-c9217cde53d8"
     },
+    "entrypoint": "MyAgent",
     "scriptName": "client-worker",
     "diagnosticsChannelEvents": [],
-    "exceptions": [
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761324217671,
+    "event": {
+        "rpcMethod": ""
+    }
+}
+{
+    "wallTime": 6878,
+    "cpuTime": 23,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "f7cac9a27254b52bee500010a261960e72a4c131178174b157e13acd1a29532e",
+    "scriptVersion": {
+        "id": "23fae9d1-23bd-4bfc-86e4-c9217cde53d8"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
         {
-            "name": "Error",
-            "message": "Too many subrequests.",
-            "timestamp": 1761199036714
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connected successfully using streamable-http transport for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "streamable-http",
+                        "state": "connecting"
+                    },
+                    "timestamp": 1761324227795,
+                    "id": "oYAqaKpuhIql0d4JKNpsi"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761324227795
+        },
+        {
+            "message": [
+                "connection id: ",
+                "WryVWi-u"
+            ],
+            "level": "log",
+            "timestamp": 1761324227811
+        },
+        {
+            "message": [
+                "TOOLS: ",
+                [
+                    {
+                        "name": "echo",
+                        "description": "Echo input text",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "text"
+                            ],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "WryVWi-u"
+                    },
+                    {
+                        "name": "apps_on_device",
+                        "description": "List apps on a device",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "device_id": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "device_id"
+                            ],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "WryVWi-u"
+                    },
+                    {
+                        "name": "msoffice_versions",
+                        "description": "Microsoft Office versions",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "WryVWi-u"
+                    },
+                    {
+                        "name": "slack_vs_teams",
+                        "description": "Slack vs Teams",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "WryVWi-u"
+                    },
+                    {
+                        "name": "outdated_java_devices",
+                        "description": "Devices with outdated Java",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "WryVWi-u"
+                    },
+                    {
+                        "name": "browser_updates",
+                        "description": "Devices needing browser updates",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "WryVWi-u"
+                    },
+                    {
+                        "name": "unallowed_apps",
+                        "description": "Devices with unallowed apps",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "WryVWi-u"
+                    },
+                    {
+                        "name": "unencrypted_devices",
+                        "description": "Devices without encryption",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "WryVWi-u"
+                    },
+                    {
+                        "name": "no_autolock_devices",
+                        "description": "Devices without auto-lock",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "WryVWi-u"
+                    },
+                    {
+                        "name": "os_distribution",
+                        "description": "OS distribution",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "WryVWi-u"
+                    },
+                    {
+                        "name": "devices_needing_upgrade",
+                        "description": "Count devices needing IS upgrade",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "WryVWi-u"
+                    },
+                    {
+                        "name": "add_numbers",
+                        "description": "Add two numbers and return the sum.",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "a": {
+                                    "type": "number",
+                                    "description": "The first number"
+                                },
+                                "b": {
+                                    "type": "number",
+                                    "description": "The second number"
+                                }
+                            },
+                            "required": [
+                                "a",
+                                "b"
+                            ],
+                            "$schema": "http://json-schema.org/draft-07/schema#"
+                        },
+                        "serverId": "WryVWi-u"
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761324227811
+        },
+        {
+            "message": [
+                "normTOOLS: ",
+                [
+                    {
+                        "name": "echo",
+                        "description": "Echo input text",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "text"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "apps_on_device",
+                        "description": "List apps on a device",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {
+                                "device_id": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "device_id"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "msoffice_versions",
+                        "description": "Microsoft Office versions",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "slack_vs_teams",
+                        "description": "Slack vs Teams",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "outdated_java_devices",
+                        "description": "Devices with outdated Java",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "browser_updates",
+                        "description": "Devices needing browser updates",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "unallowed_apps",
+                        "description": "Devices with unallowed apps",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "unencrypted_devices",
+                        "description": "Devices without encryption",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "no_autolock_devices",
+                        "description": "Devices without auto-lock",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "os_distribution",
+                        "description": "OS distribution",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "devices_needing_upgrade",
+                        "description": "Count devices needing IS upgrade",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {},
+                            "required": []
+                        }
+                    },
+                    {
+                        "name": "add_numbers",
+                        "description": "Add two numbers and return the sum.",
+                        "input_schema": {
+                            "type": "object",
+                            "properties": {
+                                "a": {
+                                    "type": "number",
+                                    "description": "The first number"
+                                },
+                                "b": {
+                                    "type": "number",
+                                    "description": "The second number"
+                                }
+                            },
+                            "required": [
+                                "a",
+                                "b"
+                            ]
+                        }
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761324227811
+        },
+        {
+            "message": [
+                "before env.AI.run  "
+            ],
+            "level": "log",
+            "timestamp": 1761324227811
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connected successfully using streamable-http transport for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "streamable-http",
+                        "state": "connecting"
+                    },
+                    "timestamp": 1761324227837,
+                    "id": "ceMjoJmqXgkyV5Y2Fnnol"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761324227837
+        },
+        {
+            "message": [
+                "result: ",
+                {
+                    "response": null,
+                    "tool_calls": [
+                        {
+                            "name": "add_numbers",
+                            "arguments": {
+                                "a": 2,
+                                "b": 2
+                            }
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 492,
+                        "completion_tokens": 23,
+                        "total_tokens": 515
+                    }
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761324234127
+        },
+        {
+            "message": [
+                "Tool Calls: ",
+                [
+                    {
+                        "name": "add_numbers",
+                        "arguments": {
+                            "a": 2,
+                            "b": 2
+                        }
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761324234127
+        },
+        {
+            "message": [
+                "Calling tool: add_numbers with",
+                {
+                    "a": 2,
+                    "b": 2
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761324234127
+        },
+        {
+            "message": [
+                "toolResult: ",
+                {
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "4"
+                        }
+                    ]
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761324234143
+        },
+        {
+            "message": [
+                "Final response: The answer to 2+2 is 4."
+            ],
+            "level": "log",
+            "timestamp": 1761324234622
         }
     ],
-    "logs": [],
-    "eventTimestamp": 1761199036401,
+    "eventTimestamp": 1761324227752,
     "event": {
         "request": {
             "url": "https://agent/ask",
             "method": "POST",
             "headers": {
+                "content-length": "25",
                 "content-type": "application/json"
             }
+        },
+        "response": {
+            "status": 200
         }
     }
 }
 {
-    "wallTime": 1052,
+    "wallTime": 6901,
     "cpuTime": 0,
     "truncated": false,
     "executionModel": "stateless",
-    "outcome": "exception",
+    "outcome": "ok",
     "scriptVersion": {
-        "id": "3d9e7a88-9d93-4776-aaca-e70e96bc6cd9"
+        "id": "23fae9d1-23bd-4bfc-86e4-c9217cde53d8"
     },
     "scriptName": "client-worker",
     "diagnosticsChannelEvents": [],
-    "exceptions": [
-        {
-            "name": "TypeError",
-            "message": "Cannot read properties of null (reading 'content')",
-            "timestamp": 1761199037398
-        }
-    ],
+    "exceptions": [],
     "logs": [],
-    "eventTimestamp": 1761199036346,
+    "eventTimestamp": 1761324227734,
     "event": {
         "request": {
             "url": "https://agent/ask",
@@ -115,6 +984,164 @@
             "headers": {
                 "content-type": "application/json"
             }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 11,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "f7cac9a27254b52bee500010a261960e72a4c131178174b157e13acd1a29532e",
+    "scriptVersion": {
+        "id": "23fae9d1-23bd-4bfc-86e4-c9217cde53d8"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761324234679,
+    "event": {
+        "rpcMethod": "setName"
+    }
+}
+{
+    "wallTime": 3411,
+    "cpuTime": 2,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "f7cac9a27254b52bee500010a261960e72a4c131178174b157e13acd1a29532e",
+    "scriptVersion": {
+        "id": "23fae9d1-23bd-4bfc-86e4-c9217cde53d8"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "before env.AI.run  "
+            ],
+            "level": "log",
+            "timestamp": 1761324241636
+        },
+        {
+            "message": [
+                "result: ",
+                {
+                    "response": null,
+                    "tool_calls": [
+                        {
+                            "name": "apps_on_device",
+                            "arguments": {
+                                "device_id": "dev-001"
+                            }
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 493,
+                        "completion_tokens": 21,
+                        "total_tokens": 514
+                    }
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761324242606
+        },
+        {
+            "message": [
+                "Tool Calls: ",
+                [
+                    {
+                        "name": "apps_on_device",
+                        "arguments": {
+                            "device_id": "dev-001"
+                        }
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761324242606
+        },
+        {
+            "message": [
+                "Calling tool: apps_on_device with",
+                {
+                    "device_id": "dev-001"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761324242606
+        },
+        {
+            "message": [
+                "toolResult: ",
+                {
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "| Application        | Version    | Vendor              | Needs Update |\n|--------------------|------------|---------------------|--------------|\n| Microsoft Office | 365 | Microsoft | No |\n| Slack | 4.29.149 | Slack Technologies | Yes |\n| Google Chrome | 121.0 | Google | No |\n| Java Runtime | 8u281 | Oracle | Yes |\n"
+                        }
+                    ]
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761324243145
+        },
+        {
+            "message": [
+                "Final response: The device \"dev-001\" has the following applications installed:\n\n1. Microsoft Office (Version 365) by Microsoft - No update needed\n2. Slack (Version 4.29.149) by Slack Technologies - Update available\n3. Google Chrome (Version 121.0) by Google - No update needed\n4. Java Runtime (Version 8u281) by Oracle - Update available\n\nLet me know if you need any further assistance!"
+            ],
+            "level": "log",
+            "timestamp": 1761324245043
+        }
+    ],
+    "eventTimestamp": 1761324241636,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-length": "46",
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 3427,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "23fae9d1-23bd-4bfc-86e4-c9217cde53d8"
+    },
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761324241624,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
         }
     }
 }
