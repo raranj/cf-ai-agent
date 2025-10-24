@@ -21,7 +21,6 @@ export class MyAgent extends Agent {
       connId = await this.addMcpServer("server-worker", this.env.MCP_SERVER_URL, "https://client-worker.raranj.workers.dev");
       await this.mcp.ready;
       this.connId = connId.id;
-      console.log("connection id: ", this.connId);
 
       const tools = await this.mcp.listTools();
       await this.mcp.ready;
@@ -36,13 +35,10 @@ export class MyAgent extends Agent {
         };
       });
 
-      console.log("TOOLS: ", tools);
-      console.log("normTOOLS: ", normalizedTools);
       this.initialized = true;
       this.tools = normalizedTools;
     }
 
-    console.log('before env.AI.run  ');
     const result = await this.env.AI.run("@cf/meta/llama-3.3-70b-instruct-fp8-fast",
       {
         context: "",
@@ -53,18 +49,14 @@ export class MyAgent extends Agent {
       }
     );
 
-    console.log('result: ', result);
-    console.log('Tool Calls: ', result.tool_calls);
     var call = null;
     var args = null;
     var toolResult = null;
     if (result.tool_calls && result.tool_calls.length > 0) {
       call = result.tool_calls[0];
-      console.log(`Calling tool: ${call.name} with`, call.arguments);
 
       args = call.parameters ?? call.arguments ?? {};
       toolResult = await this.mcp.callTool({name: call.name, arguments: args, serverId: this.connId});
-      console.log('toolResult: ', toolResult);
 
       var toolResultText = toolResult.content?.[0]?.text ?? JSON.stringify(toolResult);
       var finalResponse = await this.env.AI.run("@cf/meta/llama-3.3-70b-instruct-fp8-fast", {
@@ -75,7 +67,6 @@ export class MyAgent extends Agent {
           { role: "tool", name: call.name, content: toolResultText }        ]
       });
 
-      console.log("Final response: " + finalResponse.response);
       return new Response(
         JSON.stringify({ msg: finalResponse.response }),
         { headers: { "Content-Type": "application/json" } }

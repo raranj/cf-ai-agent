@@ -38,7 +38,6 @@ async function handleRequest({ request, env, waitUntil }) {
     let body;
     try {
       body = await request.json();
-      console.log('Request: ' + body);
     } catch {
       return new Response(JSON.stringify({ error: "Invalid JSON" }), {
         status: 400,
@@ -47,8 +46,6 @@ async function handleRequest({ request, env, waitUntil }) {
     }
 
     const { id = null, method, params } = body;
-    console.log('Method: ' + method);
-    console.log('Params: ' + params);
 
     if (method === "initialize") {
       return new Response(
@@ -66,7 +63,6 @@ async function handleRequest({ request, env, waitUntil }) {
     }
 
     if (method === "notifications/initialized") {
-      console.log("✅ MCP client initialized — session is ready.");
       return new Response(null, { status: 204 });
     }
 
@@ -130,9 +126,7 @@ async function handleRequest({ request, env, waitUntil }) {
         );
       }
 
-      console.log('ToolName inside tools/call: ' + name);
       if (name === "apps_on_device") {
-        console.log("apps_on_device called with device_id:", args?.device_id);
 
         if (!args?.device_id) {
           return new Response(
@@ -147,8 +141,6 @@ async function handleRequest({ request, env, waitUntil }) {
           JOIN applications a ON da.app_id = a.app_id
           WHERE da.device_id = ?
         `).bind(args.device_id).all();
-
-        console.log("Query result:", rows);
 
         let outputText;
         if (rows.results.length === 0) {

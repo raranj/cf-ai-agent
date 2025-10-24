@@ -1,6 +1,5 @@
 export async function onRequestPost({ request, env }) {
   const rawBody = await request.text();
-  console.log("📦 Body:", rawBody);
 
   const { prompt } = JSON.parse(rawBody);
 
