@@ -6,7 +6,7 @@ A Model Context Protocol (MCP) implementation using Cloudflare Workers AI, demon
 
 **Live Demo:** [https://cf-ai-agent.pages.dev](https://cf-ai-agent.pages.dev)
 
-**Video Walkthrough:** [Link to video demonstration]
+**Video Walkthrough:** [https://illinois.zoom.us/rec/share/IvwtCIZLn7EuYYEWmXgaaQhRtlhLd_m8Dg46T8ZLcJjUx-YENxipZwQv9vU-2y5u.fjopBzG2GoNejjCV?startTime=1761352982000]
 
 ![Application Screenshot](./example.png)
 
@@ -89,7 +89,7 @@ The MCP server provides these tools for device management:
 git clone <your-repo-url>
 cd <project-directory>
 npm install
-cd client-worker && npm install && cd ..
+cd client-worker
 ```
 
 ### 2. Set Up D1 Database
