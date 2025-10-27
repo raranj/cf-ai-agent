@@ -1,0 +1,1014 @@
+{
+    "wallTime": 10,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "e5ae32b10caaaba5e69ffa866228a8fafd5be2f8f3c45ccd59ac009ac775ff0d",
+    "scriptVersion": {
+        "id": "d2fb8cbc-c0c4-4656-aedd-2f4194e0af7f"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761548291716,
+    "event": {
+        "rpcMethod": ""
+    }
+}
+{
+    "wallTime": 1414,
+    "cpuTime": 14,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "e5ae32b10caaaba5e69ffa866228a8fafd5be2f8f3c45ccd59ac009ac775ff0d",
+    "scriptVersion": {
+        "id": "d2fb8cbc-c0c4-4656-aedd-2f4194e0af7f"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connected successfully using streamable-http transport for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "streamable-http",
+                        "state": "connecting"
+                    },
+                    "timestamp": 1761548332754,
+                    "id": "pLvB3zoTvyjl4UK0-olHo"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761548332754
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connected successfully using streamable-http transport for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "streamable-http",
+                        "state": "connecting"
+                    },
+                    "timestamp": 1761548332756,
+                    "id": "sXuyjmuxdmkkX836Qa-PG"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761548332756
+        },
+        {
+            "message": [
+                "context window: ",
+                [
+                    {
+                        "role": "user",
+                        "content": "what is 1-1"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your function definitions are not comprehensive enough for this task. Please expand them."
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "The function definitions you've provided do not encompass this task. Please revise your function definitions."
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761548332764
+        },
+        {
+            "message": [
+                {
+                    "displayMessage": "State updated",
+                    "id": "GPUe4qxYEreQVU0wIxHnr",
+                    "payload": {},
+                    "timestamp": 1761548333829,
+                    "type": "state:update"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761548333829
+        },
+        {
+            "message": [
+                "state messages: ",
+                [
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": null
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 3-4"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your input is lacking necessary details. Please provide more information or specify the task you need help with."
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 1-1"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your function definitions are not comprehensive enough for this task. Please expand them."
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "The function definitions you've provided do not encompass this task. Please revise your function definitions."
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": null
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761548333829
+        },
+        {
+            "message": [
+                "name of function: ",
+                "add_numbers"
+            ],
+            "level": "log",
+            "timestamp": 1761548333829
+        }
+    ],
+    "eventTimestamp": 1761548332728,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-length": "24",
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1423,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "d2fb8cbc-c0c4-4656-aedd-2f4194e0af7f"
+    },
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761548332650,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 7,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "e5ae32b10caaaba5e69ffa866228a8fafd5be2f8f3c45ccd59ac009ac775ff0d",
+    "scriptVersion": {
+        "id": "d2fb8cbc-c0c4-4656-aedd-2f4194e0af7f"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761548334146,
+    "event": {
+        "rpcMethod": "setName"
+    }
+}
+{
+    "wallTime": 2450,
+    "cpuTime": 1,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "e5ae32b10caaaba5e69ffa866228a8fafd5be2f8f3c45ccd59ac009ac775ff0d",
+    "scriptVersion": {
+        "id": "d2fb8cbc-c0c4-4656-aedd-2f4194e0af7f"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "context window: ",
+                [
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "The function definitions you've provided do not encompass this task. Please revise your function definitions."
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": null
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761548336141
+        },
+        {
+            "message": [
+                {
+                    "displayMessage": "State updated",
+                    "id": "I4lC_B7eXrgkwNayGK01Z",
+                    "payload": {},
+                    "timestamp": 1761548338564,
+                    "type": "state:update"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761548338564
+        },
+        {
+            "message": [
+                "state messages: ",
+                [
+                    {
+                        "role": "user",
+                        "content": "what is 3-4"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your input is lacking necessary details. Please provide more information or specify the task you need help with."
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 1-1"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your function definitions are not comprehensive enough for this task. Please expand them."
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "The function definitions you've provided do not encompass this task. Please revise your function definitions."
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": null
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your function call needs to be modified to match the addition function provided, so we can calculate the difference by adding the opposite of the second number. Here is the JSON for the function call:{\"type\": \"function\", \"name\": \"add_numbers\", \"parameters\": {\"a\": \"2\", \"b\": \"-2\"}}"
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761548338564
+        }
+    ],
+    "eventTimestamp": 1761548336141,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-length": "24",
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2459,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "d2fb8cbc-c0c4-4656-aedd-2f4194e0af7f"
+    },
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761548336136,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 9,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "e5ae32b10caaaba5e69ffa866228a8fafd5be2f8f3c45ccd59ac009ac775ff0d",
+    "scriptVersion": {
+        "id": "d2fb8cbc-c0c4-4656-aedd-2f4194e0af7f"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761548338605,
+    "event": {
+        "rpcMethod": ""
+    }
+}
+{
+    "wallTime": 1820,
+    "cpuTime": 15,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "e5ae32b10caaaba5e69ffa866228a8fafd5be2f8f3c45ccd59ac009ac775ff0d",
+    "scriptVersion": {
+        "id": "d2fb8cbc-c0c4-4656-aedd-2f4194e0af7f"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connected successfully using streamable-http transport for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "streamable-http",
+                        "state": "connecting"
+                    },
+                    "timestamp": 1761548378123,
+                    "id": "UV3guzzpfNs0dKbuQcYNj"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761548378123
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connected successfully using streamable-http transport for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "streamable-http",
+                        "state": "connecting"
+                    },
+                    "timestamp": 1761548378123,
+                    "id": "giuMD8OTLWiXfLczgSfA5"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761548378123
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connected successfully using streamable-http transport for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "streamable-http",
+                        "state": "connecting"
+                    },
+                    "timestamp": 1761548378123,
+                    "id": "sMAcu2XPhCRjlUq5x1yaM"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761548378123
+        },
+        {
+            "message": [
+                "context window: ",
+                [
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": null
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your function call needs to be modified to match the addition function provided, so we can calculate the difference by adding the opposite of the second number. Here is the JSON for the function call:{\"type\": \"function\", \"name\": \"add_numbers\", \"parameters\": {\"a\": \"2\", \"b\": \"-2\"}}"
+                    },
+                    {
+                        "role": "user",
+                        "content": "my favorite color is orange"
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761548378130
+        },
+        {
+            "message": [
+                {
+                    "displayMessage": "State updated",
+                    "id": "m7IQ3FvbuILIt6vYOc-rA",
+                    "payload": {},
+                    "timestamp": 1761548378956,
+                    "type": "state:update"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761548378956
+        },
+        {
+            "message": [
+                "state messages: ",
+                [
+                    {
+                        "role": "user",
+                        "content": "what is 1-1"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your function definitions are not comprehensive enough for this task. Please expand them."
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "The function definitions you've provided do not encompass this task. Please revise your function definitions."
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": null
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your function call needs to be modified to match the addition function provided, so we can calculate the difference by adding the opposite of the second number. Here is the JSON for the function call:{\"type\": \"function\", \"name\": \"add_numbers\", \"parameters\": {\"a\": \"2\", \"b\": \"-2\"}}"
+                    },
+                    {
+                        "role": "user",
+                        "content": "my favorite color is orange"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": null
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761548378956
+        },
+        {
+            "message": [
+                "name of function: ",
+                "echo"
+            ],
+            "level": "log",
+            "timestamp": 1761548378956
+        }
+    ],
+    "eventTimestamp": 1761548378096,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-length": "40",
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1829,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "d2fb8cbc-c0c4-4656-aedd-2f4194e0af7f"
+    },
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761548377975,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 8,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "e5ae32b10caaaba5e69ffa866228a8fafd5be2f8f3c45ccd59ac009ac775ff0d",
+    "scriptVersion": {
+        "id": "d2fb8cbc-c0c4-4656-aedd-2f4194e0af7f"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761548379925,
+    "event": {
+        "rpcMethod": "setName"
+    }
+}
+{
+    "wallTime": 863,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "e5ae32b10caaaba5e69ffa866228a8fafd5be2f8f3c45ccd59ac009ac775ff0d",
+    "scriptVersion": {
+        "id": "d2fb8cbc-c0c4-4656-aedd-2f4194e0af7f"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "context window: ",
+                [
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your function call needs to be modified to match the addition function provided, so we can calculate the difference by adding the opposite of the second number. Here is the JSON for the function call:{\"type\": \"function\", \"name\": \"add_numbers\", \"parameters\": {\"a\": \"2\", \"b\": \"-2\"}}"
+                    },
+                    {
+                        "role": "user",
+                        "content": "my favorite color is orange"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": null
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is my favorite color"
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761548386637
+        },
+        {
+            "message": [
+                {
+                    "displayMessage": "State updated",
+                    "id": "yhzI1u_c5uqsqTFZbuxMU",
+                    "payload": {},
+                    "timestamp": 1761548387465,
+                    "type": "state:update"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761548387465
+        },
+        {
+            "message": [
+                "state messages: ",
+                [
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "The function definitions you've provided do not encompass this task. Please revise your function definitions."
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": null
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your function call needs to be modified to match the addition function provided, so we can calculate the difference by adding the opposite of the second number. Here is the JSON for the function call:{\"type\": \"function\", \"name\": \"add_numbers\", \"parameters\": {\"a\": \"2\", \"b\": \"-2\"}}"
+                    },
+                    {
+                        "role": "user",
+                        "content": "my favorite color is orange"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": null
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is my favorite color"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your input is not sufficient. Please provide more details or specify the task you need help with."
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761548387465
+        }
+    ],
+    "eventTimestamp": 1761548386637,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-length": "38",
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 873,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "d2fb8cbc-c0c4-4656-aedd-2f4194e0af7f"
+    },
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761548386629,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 9,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "e5ae32b10caaaba5e69ffa866228a8fafd5be2f8f3c45ccd59ac009ac775ff0d",
+    "scriptVersion": {
+        "id": "d2fb8cbc-c0c4-4656-aedd-2f4194e0af7f"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761548387508,
+    "event": {
+        "rpcMethod": ""
+    }
+}
+{
+    "wallTime": 1203,
+    "cpuTime": 18,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "e5ae32b10caaaba5e69ffa866228a8fafd5be2f8f3c45ccd59ac009ac775ff0d",
+    "scriptVersion": {
+        "id": "d2fb8cbc-c0c4-4656-aedd-2f4194e0af7f"
+    },
+    "entrypoint": "MyAgent",
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connected successfully using streamable-http transport for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "streamable-http",
+                        "state": "connecting"
+                    },
+                    "timestamp": 1761548399204,
+                    "id": "Fabl5UjLUT2ghZvq-1zVF"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761548399204
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connected successfully using streamable-http transport for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "streamable-http",
+                        "state": "connecting"
+                    },
+                    "timestamp": 1761548399204,
+                    "id": "Vdp37Wuny0tJx1TRuxYaT"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761548399204
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connected successfully using streamable-http transport for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "streamable-http",
+                        "state": "connecting"
+                    },
+                    "timestamp": 1761548399204,
+                    "id": "tXrC2ye-yyQNN2ngbBeW5"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761548399204
+        },
+        {
+            "message": [
+                {
+                    "type": "mcp:client:connect",
+                    "displayMessage": "Connected successfully using streamable-http transport for https://server-worker.raranj.workers.dev/",
+                    "payload": {
+                        "url": "https://server-worker.raranj.workers.dev/",
+                        "transport": "streamable-http",
+                        "state": "connecting"
+                    },
+                    "timestamp": 1761548399205,
+                    "id": "6rQcT3HkTolbGB8eVCV-0"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761548399205
+        },
+        {
+            "message": [
+                "context window: ",
+                [
+                    {
+                        "role": "user",
+                        "content": "my favorite color is orange"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": null
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is my favorite color"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your input is not sufficient. Please provide more details or specify the task you need help with."
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is my favorite color based on previous messages"
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761548399215
+        },
+        {
+            "message": [
+                {
+                    "displayMessage": "State updated",
+                    "id": "c-Niqxk3CnLIDz2tNkM6a",
+                    "payload": {},
+                    "timestamp": 1761548400351,
+                    "type": "state:update"
+                }
+            ],
+            "level": "log",
+            "timestamp": 1761548400351
+        },
+        {
+            "message": [
+                "state messages: ",
+                [
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": null
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is 2-2"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your function call needs to be modified to match the addition function provided, so we can calculate the difference by adding the opposite of the second number. Here is the JSON for the function call:{\"type\": \"function\", \"name\": \"add_numbers\", \"parameters\": {\"a\": \"2\", \"b\": \"-2\"}}"
+                    },
+                    {
+                        "role": "user",
+                        "content": "my favorite color is orange"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": null
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is my favorite color"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your input is not sufficient. Please provide more details or specify the task you need help with."
+                    },
+                    {
+                        "role": "user",
+                        "content": "what is my favorite color based on previous messages"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Your input is lacking necessary details. Please provide more information or specify the task you need help with."
+                    }
+                ]
+            ],
+            "level": "log",
+            "timestamp": 1761548400351
+        }
+    ],
+    "eventTimestamp": 1761548399186,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-length": "65",
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1213,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "d2fb8cbc-c0c4-4656-aedd-2f4194e0af7f"
+    },
+    "scriptName": "client-worker",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1761548399178,
+    "event": {
+        "request": {
+            "url": "https://agent/ask",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}

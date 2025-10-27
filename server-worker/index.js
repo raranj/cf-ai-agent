@@ -95,11 +95,6 @@ async function handleRequest({ request, env, waitUntil }) {
     if (method === "tools/call") {
       const { name, arguments: args } = params || {};
 
-      const runQuery = async (sql, binds = []) => {
-        const r = await env.devices_db.prepare(sql).bind(...binds).all();
-        return r?.results ?? [];
-      };
-
       if (name === "add_numbers") {
         var { a, b } = args || {};
         a = Number(a);

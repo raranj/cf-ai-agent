@@ -1,5 +1,4 @@
 import { Agent } from "agents";
-import { getCurrentAgent } from "agents";
 export class MyAgent extends Agent {
   constructor(state, env) {
     super(state, env);
@@ -35,7 +34,6 @@ export class MyAgent extends Agent {
         };
       });
 
-      this.initialized = true;
       this.tools = normalizedTools;
     }
 
@@ -74,7 +72,7 @@ export class MyAgent extends Agent {
     }
 
     return new Response(
-        JSON.stringify({ msg: "No Response from Server" }),
+        JSON.stringify({ msg: result.response }),
         { headers: { "Content-Type": "application/json" } }
       );
   }
@@ -82,9 +80,9 @@ export class MyAgent extends Agent {
 
 export default {
   async fetch(req, env) {
-    const id = env.MY_AGENT.idFromName("singleton1");
+    const id = env.MY_AGENT.idFromName("it_agent");
     const stub = env.MY_AGENT.get(id);
-    stub.setName("singleton1");
+    stub.setName("it_agent");
     return stub.fetch(req.clone());
   },
 };
